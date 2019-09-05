@@ -2,93 +2,174 @@ clc
 clear all
 close all
 warning('off')
-%% 1 Reading Data
-in = csvread('INPUT_27_07_19.csv');
-M1 = csvread('M1_27_07_19.csv');
-M2 = csvread('M2_27_07_19.csv');
-M3 = csvread('M3_27_07_19.csv');
-M4 = csvread('M4_27_07_19.csv');
+MODE = 'PLOT'; %DIR or DRIB or PLOT
 
-
-%% 2 Data processing
-%merging all data
-data = horzcat(in, M1, M2, M3, M4);
-%sorting data based on first column
-dataS = sortrows(data,1,'ascend');
-%Finding zero speeds due to motor inertia
-j = 1;
-for i = 1:length(dataS)
-    ref = dataS(i,2) + dataS(i,3) + dataS(i,4) + dataS(i,5);
-    if ref == 0
+if strcmpi('DIR',MODE)
+    
+    %% 1 Reading Data
+    in = csvread('INPUT_27_07_19.csv');
+    M1 = csvread('M1_27_07_19.csv');
+    M2 = csvread('M2_27_07_19.csv');
+    M3 = csvread('M3_27_07_19.csv');
+    M4 = csvread('M4_27_07_19.csv');
+    %% 2 Data processing
+    %merging all data
+    data = horzcat(in, M1, M2, M3, M4);
+    %sorting data based on first column
+    dataS = sortrows(data,1,'ascend');
+    %Finding zero speeds due to motor inertia
+    j = 1;
+    for i = 1:length(dataS)
+        ref = dataS(i,2) + dataS(i,3) + dataS(i,4) + dataS(i,5);
+       if ref == 0
         toDelet(j) = i;
         j = j + 1;
+       end
+    end    
+    fprintf('Found %d data to delet\n',length(toDelet));
+    %Deleting rows with zero speeds from sorted data to build the curve
+    dataS(toDelet(1):toDelet(end),:) = []; 
+    %Sorting between positive and negative PWMs
+    j = 1;
+    k = 1;
+    for i=1:length(dataS)
+       if dataS(i,1) < 0
+          data_NEG(j,:) = dataS(i,:);
+          j = j + 1;
+       else
+          data_POS(k,:) = dataS(i,:);
+          k = k + 1;  
+       end
     end
-end    
-fprintf('Found %d data to delet\n',length(toDelet));
-%Deleting rows with zero speeds from sorted data to build the curve
-dataS(toDelet(1):toDelet(end),:) = []; 
-%Sorting between positive and negative PWMs
-j = 1;
-k = 1;
-for i=1:length(dataS)
-    if dataS(i,1) < 0
-        data_NEG(j,:) = dataS(i,:);
-        j = j + 1;
-    else
-        data_POS(k,:) = dataS(i,:);
-        k = k + 1;  
+    
+    in_POS = data_POS(:,1);
+    M1_POS = data_POS(:,2);
+    M2_POS = data_POS(:,3);
+    M3_POS = data_POS(:,4);
+    M4_POS = data_POS(:,5);
+
+    in_NEG = data_NEG(:,1);
+    M1_NEG = data_NEG(:,2);
+    M2_NEG = data_NEG(:,3);
+    M3_NEG = data_NEG(:,4);
+    M4_NEG = data_NEG(:,5);
+    %% 3 Plotting data
+
+    %Negative data
+    figure('WindowState','minimized');
+    plot(M1_POS,  in_POS, '.');
+    hold on
+    plot(M2_POS,  in_POS, '.');
+    plot(M3_POS,  in_POS, '.');
+    plot(M4_POS,  in_POS, '.');
+    title('Motor  Curve - Positive');
+    ylabel('PWM');
+    xlabel('Rad/s');
+
+    %Positive data
+    figure('WindowState','minimized');
+    plot(M1_NEG, in_NEG, '.');
+    hold on
+    plot(M2_NEG, in_NEG, '.');
+    plot(M3_NEG, in_NEG, '.');
+    plot(M4_NEG, in_NEG, '.');
+    title('Motor  Curve - Negative');
+    ylabel('PWM');
+    xlabel('Rad/s');
+
+    %% 4 Fitting
+
+    [fit1_POS,gof1_POS] = getBestFit(M1_POS, in_POS, 'Motor 1 POS');
+    [fit2_POS,gof2_POS] = getBestFit(M2_POS, in_POS, 'Motor 2 POS');
+    [fit3_POS,gof3_POS] = getBestFit(M3_POS, in_POS, 'Motor 3 POS');
+    [fit4_POS,gof4_POS] = getBestFit(M4_POS, in_POS, 'Motor 4 POS');
+    [fit1_NEG,gof1_NEG] = getBestFit(M1_NEG, in_NEG, 'Motor 1 NEG');
+    [fit2_NEG,gof2_NEG] = getBestFit(M2_NEG, in_NEG, 'Motor 2 NEG');
+    [fit3_NEG,gof3_NEG] = getBestFit(M3_NEG, in_NEG, 'Motor 3 NEG');
+    [fit4_NEG,gof1_NEG] = getBestFit(M4_NEG, in_NEG, 'Motor 4 NEG');
+
+
+    figure; 
+    plot(fit1_POS,M1_POS,in_POS);
+elseif strcmpi('DRIB',MODE)
+    inD = csvread('INPUT_DRIBBLER_30_08_19.csv');
+	M5 = csvread('M5_DRIBBLER_30_08_19.csv');    
+	%merging all data
+	data = horzcat(inD, M5);
+	%sorting data based on first column
+	dataS = sortrows(data,1,'ascend');
+	%Finding zero speeds due to motor inertia
+	j = 1;
+	for i = 1:length(dataS)
+        ref = dataS(i,2);
+        if ref == 0
+            toDelet(j) = i;
+            j = j + 1;
+        end
+    end    
+	fprintf('Found %d data to delet\n',length(toDelet));
+	%Deleting rows with zero speeds from sorted data to build the curve
+	dataS(toDelet(1):toDelet(end),:) = []; 
+	%Sorting between positive and negative PWMs
+	j = 1;
+	k = 1;
+  	for i=1:length(dataS)
+        if dataS(i,1) < 0
+            data_NEG(j,:) = dataS(i,:);
+            j = j + 1;
+        else
+            data_POS(k,:) = dataS(i,:);
+            k = k + 1;  
+        end
     end
+            
+	in_POS = data_POS(:,1);
+	M5_POS = data_POS(:,2);  
+	in_NEG = data_NEG(:,1);
+	M5_NEG = data_NEG(:,2);   
+	%% 3 Plotting data
+
+	%Negative data
+	figure('WindowState','minimized');
+	plot(M5_POS,  in_POS, '.');
+	%hold on
+	%plot(M2_POS,  in_POS, '.');
+	%plot(M3_POS,  in_POS, '.');
+	%plot(M4_POS,  in_POS, '.');
+	title('Motor  Curve - Positive');
+	ylabel('PWM');
+	xlabel('Rad/s');
+
+	%Positive data
+	figure('WindowState','minimized');
+	plot(M5_NEG, in_NEG, '.');
+	hold on
+	%plot(M2_NEG, in_NEG, '.');
+	%plot(M3_NEG, in_NEG, '.');
+	%plot(M4_NEG, in_NEG, '.');
+	title('Motor  Curve - Negative');
+	ylabel('PWM');
+	xlabel('Rad/s');
+	%% 4 Fitting
+
+	[fit1_POS,gof1_POS] = getBestFit(M5_POS, in_POS, 'Motor Dribbler POS');    
+	[fit1_NEG,gof1_NEG] = getBestFit(M5_NEG, in_NEG, 'Motor Dribbler NEG');
+    
+	figure; 
+	plot(fit1_POS,M5_POS,in_POS);
+elseif strcmpi('PLOT',MODE)
+	fprintf('Initializing real time plot...\n');
+    x=[0:.02:16]
+    y=sin(3*x)
+    figure(1);hold all
+    Dx=50;y1=-1.2;y2=1.2;
+    for n=1:1:numel(x)
+        plot(x,y,'blue');axis([x(n) x(n+Dx) y1 y2]);drawnow
+    end
+else 
+	fprintf('Incorrect mode, please check it and try again\n');
 end
 
-in_POS = data_POS(:,1);
-M1_POS = data_POS(:,2);
-M2_POS = data_POS(:,3);
-M3_POS = data_POS(:,4);
-M4_POS = data_POS(:,5);
-
-in_NEG = data_NEG(:,1);
-M1_NEG = data_NEG(:,2);
-M2_NEG = data_NEG(:,3);
-M3_NEG = data_NEG(:,4);
-M4_NEG = data_NEG(:,5);
-%% 3 Plotting data
-
-%Negative data
-figure('WindowState','minimized');
-plot(M1_POS,  in_POS, '.');
-hold on
-plot(M2_POS,  in_POS, '.');
-plot(M3_POS,  in_POS, '.');
-plot(M4_POS,  in_POS, '.');
-title('Motor  Curve - Positive');
-ylabel('PWM');
-xlabel('Rad/s');
-
-%Positive data
-figure('WindowState','minimized');
-plot(M1_NEG, in_NEG, '.');
-hold on
-plot(M2_NEG, in_NEG, '.');
-plot(M3_NEG, in_NEG, '.');
-plot(M4_NEG, in_NEG, '.');
-title('Motor  Curve - Negative');
-ylabel('PWM');
-xlabel('Rad/s');
-
-%% 4 Fitting
-
-[fit1_POS,gof1_POS] = getBestFit(M1_POS, in_POS, 'Motor 1 POS');
-[fit2_POS,gof2_POS] = getBestFit(M2_POS, in_POS, 'Motor 2 POS');
-[fit3_POS,gof3_POS] = getBestFit(M3_POS, in_POS, 'Motor 3 POS');
-[fit4_POS,gof4_POS] = getBestFit(M4_POS, in_POS, 'Motor 4 POS');
-[fit1_NEG,gof1_NEG] = getBestFit(M1_NEG, in_NEG, 'Motor 1 NEG');
-[fit2_NEG,gof2_NEG] = getBestFit(M2_NEG, in_NEG, 'Motor 2 NEG');
-[fit3_NEG,gof3_NEG] = getBestFit(M3_NEG, in_NEG, 'Motor 3 NEG');
-[fit4_NEG,gof1_NEG] = getBestFit(M4_NEG, in_NEG, 'Motor 4 NEG');
-
-
-figure; 
-plot(fit1_POS,M1_POS,in_POS);
 %{
 [fit2_POS,gof2_POS] = getBestFit(M2_POS, in_POS)
 [fit3_POS,gof3_POS] = getBestFit(M3_POS, in_POS)
