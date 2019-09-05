@@ -1,12 +1,13 @@
 clc
 clear all
 close all
+warning('off')
 %% 1 Reading Data
-in = csvread('INPUT_29_08_19.csv');
-M1 = csvread('M1_29_08_19.csv');
-M2 = csvread('M2_29_08_19.csv');
-M3 = csvread('M3_29_08_19.csv');
-M4 = csvread('M4_29_08_19.csv');
+in = csvread('INPUT_27_07_19.csv');
+M1 = csvread('M1_27_07_19.csv');
+M2 = csvread('M2_27_07_19.csv');
+M3 = csvread('M3_27_07_19.csv');
+M4 = csvread('M4_27_07_19.csv');
 
 
 %% 2 Data processing
@@ -53,7 +54,7 @@ M4_NEG = data_NEG(:,5);
 %% 3 Plotting data
 
 %Negative data
-figure;
+figure('WindowState','minimized');
 plot(M1_POS,  in_POS, '.');
 hold on
 plot(M2_POS,  in_POS, '.');
@@ -64,7 +65,7 @@ ylabel('PWM');
 xlabel('Rad/s');
 
 %Positive data
-figure;
+figure('Visible','minimized');
 plot(M1_NEG, in_NEG, '.');
 hold on
 plot(M2_NEG, in_NEG, '.');
@@ -76,9 +77,18 @@ xlabel('Rad/s');
 
 %% 4 Fitting
 
-[fit1_POS,gof1_POS] = getBestFit(M1_POS, in_POS)
+[fit1_POS,gof1_POS] = getBestFit(M1_POS, in_POS, 'Motor 1 POS');
+[fit2_POS,gof2_POS] = getBestFit(M2_POS, in_POS, 'Motor 2 POS');
+[fit3_POS,gof3_POS] = getBestFit(M3_POS, in_POS, 'Motor 3 POS');
+[fit4_POS,gof4_POS] = getBestFit(M4_POS, in_POS, 'Motor 4 POS');
+[fit1_NEG,gof1_NEG] = getBestFit(M1_NEG, in_NEG, 'Motor 1 NEG');
+[fit2_NEG,gof2_NEG] = getBestFit(M2_NEG, in_NEG, 'Motor 2 NEG');
+[fit3_NEG,gof3_NEG] = getBestFit(M3_NEG, in_NEG, 'Motor 3 NEG');
+[fit4_NEG,gof1_NEG] = getBestFit(M4_NEG, in_NEG, 'Motor 4 NEG');
 
-fprintf('Sum of Square Errors: %d \n',gof1_POS.sse);
+
+figure; 
+plot(fit1_POS,M1_POS,in_POS);
 %{
 [fit2_POS,gof2_POS] = getBestFit(M2_POS, in_POS)
 [fit3_POS,gof3_POS] = getBestFit(M3_POS, in_POS)
@@ -91,15 +101,20 @@ fprintf('Sum of Square Errors: %d \n',gof1_POS.sse);
 %}
 %% Function
 
+%{
 function [fitting,gof] = getBestFit(MotorData, inputData)
-    [fitting, gof] = fit(MotorData, inputData, poly1);
-    for i=2:9
+    [fitting, gof] = fit(MotorData, inputData, 'poly3', 'robust','on')
+    for i=4:7
         st = i;
         pol = ['poly' num2str(st)];
-        [tempFitting,tempGof] = fit(MotorData, inputData, pol);
-        [fitting,gof] = fit(MotorData, inputData, pol);  
+        [tempFitting,tempGof] = fit(MotorData, inputData, pol, 'robust','on')
+        if (gof.sse - tempGof.sse) > 10
+            [fitting,gof] = fit(MotorData, inputData, pol, 'robust','on');  
+            fprintf('poly%d is better\n',st);
+        end
     end
 end
+%}
 
 %hold on  
 %plot(M1_2, in2, '.');

@@ -1,10 +1,10 @@
-function [fitting,gof] = getBestFit(motorData, inputData)
+function [fitting,gof] = getBestFit(motorData, inputData, motorName)
 %CREATEFIT1(M1_POS,IN_POS)
 %  Create a fit.
 %
 %  Data for 'untitled fit 1' fit:
-%      X Input : M1_POS
-%      Y Output: in_POS
+%      X Input : motorData
+%      Y Output: inputData
 %  Output:
 %      fitresult : a fit object representing the fit.
 %      gof : structure with goodness-of fit info.
@@ -18,7 +18,7 @@ function [fitting,gof] = getBestFit(motorData, inputData)
 [xData, yData] = prepareCurveData(motorData, inputData);
 
 % Set up fittype and options.
-ft = fittype( 'poly3' );
+ft = fittype( 'poly1' );
 opts = fitoptions( 'Method', 'LinearLeastSquares' );
 opts.Robust = 'Bisquare';
 
@@ -26,22 +26,25 @@ opts.Robust = 'Bisquare';
 [fitting, gof] = fit( xData, yData, ft, opts );
 
 % Loop
-
-for i=4:7
+fprintf('Testing %s: poly1',motorName);
+bestPol = 1;
+for i=2:7
         st = i;
         ft = ['poly' num2str(st)];
         pol = fittype( ft );
-        [tempFitting,tempGof] = fit(motorData, inputData, pol, opts)
+        fprintf(', poly%d',st);
+        [tempFitting,tempGof] = fit(motorData, inputData, pol, opts);
         if (gof.sse - tempGof.sse) > 10
-            [fitting,gof] = fit(MotorData, inputData, pol, opts);  
-            fprintf('poly%d is better\n',st);
-        end
+            [fitting,gof] = fit(motorData, inputData, pol, opts);
+            bestPol = st;
+        end        
     end
-
+fprintf('.\nFor %s, poly%d is better\n',motorName,bestPol);
 
 % Create a figure for the plots.
-figure( 'Name', 'untitled fit 1' );
+figure( 'Name', 'Fitting Curve','WindowState','minimized');
 
+title(motorName)
 % Plot fit with data.
 subplot( 2, 1, 1 );
 h = plot( fitting, xData, yData, 'predobs' );
@@ -54,10 +57,10 @@ grid on
 % Plot residuals.
 subplot( 2, 1, 2 );
 h = plot( fitting, xData, yData, 'residuals' );
-legend( h, 'untitled fit 1 - residuals', 'Zero Line', 'Location', 'NorthEast' );
+legend( h, 'Fitting Curve', 'Zero Line', 'Location', 'NorthEast' );
 % Label axes
-xlabel MotorData
-ylabel inputData
+xlabel Speed
+ylabel PWM
 grid on
 
 
