@@ -77,6 +77,9 @@ xlabel('Rad/s');
 %% 4 Fitting
 
 [fit1_POS,gof1_POS] = getBestFit(M1_POS, in_POS)
+
+fprintf('Sum of Square Errors: %d \n',gof1_POS.sse);
+%{
 [fit2_POS,gof2_POS] = getBestFit(M2_POS, in_POS)
 [fit3_POS,gof3_POS] = getBestFit(M3_POS, in_POS)
 [fit4_POS,gof4_POS] = getBestFit(M4_POS, in_POS)
@@ -85,11 +88,17 @@ xlabel('Rad/s');
 [fit2_NEG,gof2_NEG] = getBestFit(M2_NEG, in_NEG)
 [fit3_NEG,gof3_NEG] = getBestFit(M3_NEG, in_NEG)
 [fit4_NEG,gof4_NEG] = getBestFit(M4_NEG, in_NEG)
+%}
 %% Function
 
 function [fitting,gof] = getBestFit(MotorData, inputData)
-    
-    [fitting,gof] = fit(MotorData, inputData, 'poly4');    
+    [fitting, gof] = fit(MotorData, inputData, poly1);
+    for i=2:9
+        st = i;
+        pol = ['poly' num2str(st)];
+        [tempFitting,tempGof] = fit(MotorData, inputData, pol);
+        [fitting,gof] = fit(MotorData, inputData, pol);  
+    end
 end
 
 %hold on  
