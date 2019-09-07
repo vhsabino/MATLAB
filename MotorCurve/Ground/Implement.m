@@ -2,7 +2,7 @@ clc
 clear all
 close all
 warning('off')
-MODE = 'PLOT'; %DIR or DRIB or PLOT
+MODE = 'DRIB'; %DIR or DRIB or PLOT
 
 if strcmpi('DIR',MODE)
     
@@ -159,8 +159,8 @@ elseif strcmpi('DRIB',MODE)
 	plot(fit1_POS,M5_POS,in_POS);
 elseif strcmpi('PLOT',MODE)
 	fprintf('Initializing real time plot...\n');
-    x=[0:.02:16]
-    y=sin(3*x)
+    x=[0:.02:16];
+    y=sin(3*x);
     figure(1);hold all
     Dx=50;y1=-1.2;y2=1.2;
     for n=1:1:numel(x)
