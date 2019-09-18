@@ -47,7 +47,7 @@ catch
    %clear all
 end
 fprintf("Creating DATA_17_09_19.csv file..,\n");
-csvwrite('DATA_AIR_80_17_09_19.csv',data);
+csvwrite('DATA_17_09_19.csv',data);
 fprintf("We can continue the code \n");
 %unified = horzcat(results1, results2, results3, results4);
 % for i = 1:400
