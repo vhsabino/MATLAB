@@ -2,7 +2,7 @@ clc
 clear all
 close all
 warning('off')
-MODO = 'DIR'; %DIR or DRIB or PLOT
+MODO = 'DRIB'; %DIR or DRIB or PLOT
 
 if strcmpi('DIR',MODO)
     
@@ -36,12 +36,12 @@ if strcmpi('DIR',MODO)
     dataSMedian = getMedian(dataS);
     j = 1;
     k = 1;
-    for i=1:length(dataSMedian)
-       if dataSMedian(i,1) < 0
-          data_NEG(j,:) = dataSMedian(i,:);
+    for i=1:length(dataSMean)
+       if dataSMean(i,1) < 0
+          data_NEG(j,:) = dataSMean(i,:);
           j = j + 1;
        else
-          data_POS(k,:) = dataSMedian(i,:);
+          data_POS(k,:) = dataSMean(i,:);
           k = k + 1;  
        end
     end
@@ -63,9 +63,9 @@ if strcmpi('DIR',MODO)
     figure('WindowState','minimized');
     plot(M1_POS,  in_POS, '.');
     hold on
-    %plot(M2_POS,  in_POS, '.');
-    %plot(M3_POS,  in_POS, '.');
-    %plot(M4_POS,  in_POS, '.');
+    plot(M2_POS,  in_POS, '.');
+    plot(M3_POS,  in_POS, '.');
+    plot(M4_POS,  in_POS, '.');
     %title('Motor  Curve - Positive');
     %ylabel('PWM');
     %xlabel('Rad/s');
@@ -74,10 +74,10 @@ if strcmpi('DIR',MODO)
     %figure('WindowState','minimized');
     plot(M1_NEG, in_NEG, '.');
     hold on
-    %plot(M2_NEG, in_NEG, '.');
-    %plot(M3_NEG, in_NEG, '.');
-    %plot(M4_NEG, in_NEG, '.');
-    title('Motor 1 GND Curve - Median');
+    plot(M2_NEG, in_NEG, '.');
+    plot(M3_NEG, in_NEG, '.');
+    plot(M4_NEG, in_NEG, '.');
+    title('Motor 1 GND Curve - Mean');
     ylabel('PWM');
     xlabel('Rad/s');
 

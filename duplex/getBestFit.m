@@ -28,7 +28,7 @@ opts.Robust = 'Bisquare';
 % Loop
 fprintf('Testing %s: poly1',motorName);
 bestPol = 1;
-for i=2:7
+for i=1:1
         st = i;
         ft = ['poly' num2str(st)];
         pol = fittype( ft );
