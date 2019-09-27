@@ -12,4 +12,4 @@ motor1_300ms = iddata(M1_300ms, IN_300ms, 0.005);
 data_100ms = csvread('DATA_GROUND_100_27_09_19.csv');
 M1_100ms = data_100ms([1:46285],2);
 IN_100ms = data_100ms([1:46285],1);
-motor1_100ms = iddata(M1_100ms, IN_100ms, 0.005);
+motor1_100ms = iddata(M1, IN, 0.005);

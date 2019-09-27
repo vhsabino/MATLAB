@@ -47,8 +47,8 @@ catch
    clear nucleo144                              
    %clear all
 end
-fprintf("Creating DATA_GROUND_300_27_09_19.csv file..,\n");
-csvwrite('DATA_GROUND_300_27_09_19.csv',data);
+fprintf("Creating DATA_GROUND_100_27_09_19.csv file..,\n");
+csvwrite('DATA_GROUND_100_27_09_19.csv',data);
 fprintf("We can continue the code \n");
 %unified = horzcat(results1, results2, results3, results4);
 % for i = 1:400
