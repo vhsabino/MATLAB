@@ -16,7 +16,7 @@ try
         data(i,3) = fscanf(nucleo144,'%f');
         data(i,4) = fscanf(nucleo144,'%f');
         data(i,5) = fscanf(nucleo144,'%f');
-        disp(data(i,1));
+        disp(i);
         i = i + 1;
     end
     %for i = 1:300
@@ -46,8 +46,8 @@ catch
    clear nucleo144                              
    %clear all
 end
-fprintf("Creating DATA_17_09_19.csv file..,\n");
-csvwrite('DATA_17_09_19.csv',data);
+fprintf("Creating DATA_25_09_19.csv file..,\n");
+csvwrite('DATA_25_09_19.csv',data);
 fprintf("We can continue the code \n");
 %unified = horzcat(results1, results2, results3, results4);
 % for i = 1:400

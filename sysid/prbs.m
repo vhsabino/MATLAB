@@ -1,4 +1,3 @@
-clc
 clear all
 close all
 P = 4095;
@@ -13,3 +12,9 @@ plot(t,u1)
 hold on
 %plot(u1)
 title('Periodic Signal')
+for i = 4000:4095
+   fprintf("%d, ",u1(i)); 
+   if mod(i,15) == 0
+       fprintf("\n");
+   end
+end
