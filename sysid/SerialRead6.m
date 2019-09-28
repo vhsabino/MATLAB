@@ -1,7 +1,7 @@
 clear all
 close all
-data = zeros(200000, 5, 'double');
-data1 = zeros(200000, 1, 'int32');
+data = zeros(500000, 5, 'double');
+%data1 = zeros(200000, 1, 'int32');
 warning('off')
 delete(instrfindall);
 try
@@ -11,7 +11,7 @@ try
     %for i = 1:30000
     i = 1;
     while 1
-        data1(i,1) = fscanf(nucleo144,'%d');
+        %data1(i,1) = fscanf(nucleo144,'%d');
         data(i,1) = fscanf(nucleo144,'%f');
         data(i,2) = fscanf(nucleo144,'%f');
         data(i,3) = fscanf(nucleo144,'%f');
