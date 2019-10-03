@@ -6,7 +6,7 @@ warning('off')
 delete(instrfindall);
 try
     
-    nucleo144 = serial('/dev/ttyACM0','BaudRate',460800);
+    nucleo144 = serial('COM3','BaudRate',460800);
     fopen(nucleo144);
     %for i = 1:30000
     i = 1;
@@ -47,8 +47,8 @@ catch
    clear nucleo144                              
    %clear all
 end
-fprintf("Creating DATA_GROUND_100_27_09_19.csv file..,\n");
-csvwrite('DATA_GROUND_100_27_09_19.csv',data);
+fprintf("Creating DATA_AIR4_1ms_01_10_19.csv file..,\n");
+csvwrite('DATA_AIR4_1ms_01_10_19.csv',data);
 fprintf("We can continue the code \n");
 %unified = horzcat(results1, results2, results3, results4);
 % for i = 1:400
