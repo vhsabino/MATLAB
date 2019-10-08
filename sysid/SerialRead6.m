@@ -1,6 +1,6 @@
 clear all
 close all
-data = zeros(500000, 5, 'double');
+data = zeros(10000, 5, 'double');
 %data1 = zeros(200000, 1, 'int32');
 warning('off')
 delete(instrfindall);
@@ -17,7 +17,7 @@ try
         data(i,3) = fscanf(nucleo144,'%f');
         data(i,4) = fscanf(nucleo144,'%f');
         data(i,5) = fscanf(nucleo144,'%f');
-        disp(i);
+        %disp(i);
         i = i + 1;
     end
     %for i = 1:300
@@ -47,8 +47,8 @@ catch
    clear nucleo144                              
    %clear all
 end
-fprintf("Creating DATA_AIR4_1ms_01_10_19.csv file..,\n");
-csvwrite('DATA_AIR4_1ms_01_10_19.csv',data);
+fprintf("Creating DATA_GROUND_1ms_08_10_19.csv file..,\n");
+csvwrite('DATA_GROUND_1ms_08_10_19.csv',data);
 fprintf("We can continue the code \n");
 %unified = horzcat(results1, results2, results3, results4);
 % for i = 1:400
