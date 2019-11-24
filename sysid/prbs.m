@@ -1,11 +1,9 @@
-clear all
-close all
-P = 4095;
-nu = 1;
-T = 0.05;
+P = 4095; % Num. Samples
+nu = 1; % Num. inputs
+T = 0.05; % Sampling time (seconds)
 N = [P nu T];
-band = [0 1];
-range = [15 35];
+band = [0 1]; % Band
+range = [15 35]; % PWM Range
 u1 = idinput([4095,1,1],'PRBS',band,range);
 t = 0:T:(P-1)*T;
 plot(t,u1)

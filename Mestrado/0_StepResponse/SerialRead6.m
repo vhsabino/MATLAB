@@ -1,13 +1,13 @@
 clear all
 close all
-data = zeros(10000, 5, 'double');
+data = zeros(10000, 4, 'double');
 %data1 = zeros(200000, 1, 'int32');
 warning('off')
 delete(instrfindall);
 
 try
     
-    nucleo144 = serial('COM3','BaudRate',460800);
+    nucleo144 = serial('COM7','BaudRate',460800);
     fopen(nucleo144);
     %for i = 1:30000
     i = 1;
@@ -17,7 +17,7 @@ try
         data(i,2) = fscanf(nucleo144,'%f');
         data(i,3) = fscanf(nucleo144,'%f');
         data(i,4) = fscanf(nucleo144,'%f');
-        data(i,5) = fscanf(nucleo144,'%f');
+        %data(i,5) = fscanf(nucleo144,'%f');
         %disp(i);
         i = i + 1;
     end
@@ -48,8 +48,8 @@ catch
    clear nucleo144                              
    %clear all
 end
-fprintf("Creating DATA_AIR_Modified_1ms_08_10_19.csv file..,\n");
-csvwrite('DATA_GROUND_Modified_1ms_08_10_19.csv',data);
+fprintf("Creating STEP_20_MOTOR_DRIB_21_11_2019.csv file..,\n");
+csvwrite('STEP_20_MOTOR_DRIB_7ms_21_11_2019.csv',data);
 fprintf("We can continue the code \n");
 l = i - 1;
 tlength = l / 500;

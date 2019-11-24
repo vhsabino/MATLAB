@@ -2,7 +2,7 @@ clc
 clear all
 close all
 warning('off')
-MODE = 'DRIB'; %DIR or DRIB or PLOT
+MODE = 'DIR'; %DIR or DRIB or PLOT
 
 if strcmpi('DIR',MODE)
     
