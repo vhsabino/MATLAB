@@ -6,10 +6,12 @@ band = [0 1]; % Band
 range = [15 35]; % PWM Range
 u1 = idinput([4095,1,1],'PRBS',band,range);
 t = 0:T:(P-1)*T;
-plot(t,u1)
+plot(t,u1,'-r','lineWidth', 2.5)
 hold on
 %plot(u1)
-title('Periodic Signal')
+title('Sinal Binário Pseudo-Aleatório')
+xlabel('Tempo (s)');
+ylabel('PWM (%dutyCycle)');
 for i = 4000:4095
    fprintf("%d, ",u1(i)); 
    if mod(i,15) == 0
