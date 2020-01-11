@@ -1,5 +1,5 @@
 clc
-%clear all
+clear all
 close all
 %% Loading data
 %Input with 300ms rise time assumed

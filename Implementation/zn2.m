@@ -2,11 +2,11 @@ clc
 clear all
 close all
 
-Ts = 0.01;
+Ts = 0.002;
 %% Motor 1
 %Continuous system
-num2 = 1.508e06;
-den2 = [1 522 1.09e04];
+num2 = 5591;
+den2 = [1 609 3506];
 tf2 = tf(num2,den2)
 Pz = c2d(tf2,Ts,'zoh');
 %response
@@ -49,8 +49,8 @@ axis([xlim    min(min(y),intcpt)  ceil(max(y))])
 %% Motor 2
 Ts = 0.01;
 %Continuous system
-num4 = 1.043e06;
-den4 = [1 274.6 6919];
+num4 = 4.104e06;
+den4 = [1 3.372e04 2.405e06];
 tf4 = tf(num4,den4)
 Pz = c2d(tf4,Ts,'zoh');
 %response
@@ -93,8 +93,8 @@ axis([xlim    min(min(y),intcpt)  ceil(max(y))])
 %% Motor 3
 Ts = 0.01;
 %Continuous system
-num6 = 9.018e05;
-den6 = [1 199.5 5666];
+num6 = 2.089e06;
+den6 = [1 1.487e04 1.274e06];
 tf6 = tf(num6,den6)
 Pz = c2d(tf6,Ts,'zoh');
 %response
@@ -137,8 +137,8 @@ axis([xlim    min(min(y),intcpt)  ceil(max(y))])
 %% Motor 4
 Ts = 0.01;
 %Continuous system
-num8 = 7.462e05;
-den8 = [1 200.6 4683];
+num8 = 9.285e06;
+den8 = [1 7.253e04 5.539e06];
 tf8 = tf(num8,den8)
 Pz = c2d(tf8,Ts,'zoh');
 %response

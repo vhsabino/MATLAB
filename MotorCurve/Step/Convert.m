@@ -13,12 +13,40 @@ out_dataType = 1; % 0 = pulses; 1 = rad/s; 2 = rpm; 3 = rps;
 
 %% 1 Reading Data
 in1 = csvread('INPUT_1_28_07_19.csv');
+i = 1;
+j = 1;
+while (i < numel(in1))
+    in1_1(j,1) = in1(i,1);
+    i = i + 2;
+    j = j + 1;
+end
 in2 = csvread('INPUT_2_28_07_19.csv'); 
+i = 1;
+j = 1;
+while (i < numel(in2))
+    in2_2(j,1) = in2(i,1);
+    i = i + 2;
+    j = j + 1;
+end
 in3 = csvread('INPUT_3_28_07_19.csv');
+i = 1;
+j = 1;
+while (i < numel(in3))
+    in3_3(j,1) = in3(i,1);
+    i = i + 2;
+    j = j + 1;
+end
 in4 = csvread('INPUT_4_28_07_19.csv');
+i = 1;
+j = 1;
+while (i < numel(in4))
+    in4_4(j,1) = in4(i,1);
+    i = i + 2;
+    j = j + 1;
+end
 %in = vertcat(in1, in2, in3, in4);
-inD = in1;
-inV= vertcat(in2, in3, in4);
+inD = in1_1;
+inV= vertcat(in2_2, in3_3, in4_4);
 %in2 = zeros(120000, 1, 'double');
 %{
 a1_neg = -3.08e-6;
@@ -45,13 +73,41 @@ end
 
 %in_conv = a1*in.^4 + a2*in.^3 + a3*in.^2 + a4*in + a5;
 %}
-M1_1 = csvread('M1_1_28_07_19.csv');
-M1_2 = csvread('M1_2_28_07_19.csv'); 
-M1_3 = csvread('M1_3_28_07_19.csv');
-M1_4 = csvread('M1_4_28_07_19.csv');
+M1_1 = csvread('M4_1_28_07_19.csv');
+i = 1;
+j = 1;
+while (i < numel(M1_1))
+    M1_1_1(j,1) = M1_1(i,1);
+    i = i + 2;
+    j = j + 1;
+end
+M1_2 = csvread('M4_2_28_07_19.csv'); 
+i = 1;
+j = 1;
+while (i < numel(M1_2))
+    M1_2_2(j,1) = M1_2(i,1);
+    i = i + 2;
+    j = j + 1;
+end
+M1_3 = csvread('M4_3_28_07_19.csv');
+i = 1;
+j = 1;
+while (i < numel(M1_3))
+    M1_3_3(j,1) = M1_3(i,1);
+    i = i + 2;
+    j = j + 1;
+end
+M1_4 = csvread('M4_4_28_07_19.csv');
+i = 1;
+j = 1;
+while (i < numel(M1_4))
+    M1_4_4(j,1) = M1_4(i,1);
+    i = i + 2;
+    j = j + 1;
+end
 %M1 =  vertcat(M1_1, M1_2, M1_3, M1_4);
-M1D = M1_1;
-M1V = vertcat(M1_2, M1_3, M1_4);
+M1D = M1_1_1;
+M1V = vertcat(M1_2_2, M1_3_3, M1_4_4);
 %{
 M2_1 = csvread('M2_1_28_07_19.csv');
 M2_2 = csvread('M2_2_28_07_19.csv'); 
@@ -69,8 +125,8 @@ M4_3 = csvread('M4_3_28_07_19.csv');
 M4_4 = csvread('M4_4_28_07_19.csv');
 M4 =  vertcat(M4_1, M4_2, M4_3, M4_4);
 %}
-C1 = customreg(@(x) max(min(x,170),-170),{'y1'},1);
-C2 = customreg(@(x) ((x > 8.5) || (x < -8.5))*x,{'u1'},0);
+%C1 = customreg(@(x) max(min(x,170),-170),{'y1'},1);
+%C2 = customreg(@(x) ((x > 8.5) || (x < -8.5))*x,{'u1'},0);
 
-z1 = iddata(M1D, inD, 0.001);
-z2 = iddata(M1V, inV, 0.001);
+z1 = iddata(M1D, inD, 0.002);
+z2 = iddata(M1V, inV, 0.002);
