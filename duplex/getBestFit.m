@@ -44,14 +44,14 @@ fprintf('.\nFor %s, poly%d is better\n',motorName,bestPol);
 % Create a figure for the plots.
 figure( 'Name', 'Fitting Curve','WindowState','minimized');
 
-title(motorName)
 % Plot fit with data.
 subplot( 2, 1, 1 );
+title(motorName)
 h = plot( fitting, xData, yData, 'predobs' );
-legend( h, 'inputData vs. motorData', 'untitled fit 1', 'Lower bounds (untitled fit 1)', 'Upper bounds (untitled fit 1)', 'Location', 'NorthEast' );
+legend( h, 'real data', motorName, 'Lower limit', 'Upper limit)', 'Location', 'NorthWest' );
 % Label axes
-xlabel motorData
-ylabel inputData
+xlabel Speed
+ylabel PWM
 grid on
 
 % Plot residuals.
@@ -62,5 +62,6 @@ legend( h, 'Fitting Curve', 'Zero Line', 'Location', 'NorthEast' );
 xlabel Speed
 ylabel PWM
 grid on
+sgtitle(motorName)
 
 

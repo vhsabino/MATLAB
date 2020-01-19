@@ -7,11 +7,11 @@ MODE = 'DIR'; %DIR or DRIB or PLOT
 if strcmpi('DIR',MODE)
     
     %% 1 Reading Data
-    in = csvread('INPUT_27_07_19.csv');
-    M1 = csvread('M1_27_07_19.csv');
-    M2 = csvread('M2_27_07_19.csv');
-    M3 = csvread('M3_27_07_19.csv');
-    M4 = csvread('M4_27_07_19.csv');
+    in = csvread('INPUT_29_08_19.csv');
+    M1 = csvread('M1_29_08_19.csv');
+    M2 = csvread('M2_29_08_19.csv');
+    M3 = csvread('M3_29_08_19.csv');
+    M4 = csvread('M4_29_08_19.csv');
     %% 2 Data processing
     %merging all data
     data = horzcat(in, M1, M2, M3, M4);
@@ -78,19 +78,98 @@ if strcmpi('DIR',MODE)
     xlabel('Rad/s');
 
     %% 4 Fitting
+    
+    %Motor 1
+    figure;
+    %plot(in,M1,'-','LineWidth',2);
+    a1 = plot(dataS(:,2),dataS(:,1),'-','lineWidth', 1.5); M1 = 'real data';
+    title('PWM x Speed - Motor 1');
+    ylabel('PWM (%dutyCycle)');
+    xlabel('Speed (rad/s)');
+    hold on
+    x1 = 1:8:140;
+    x2 = -140:8:-1;
 
-    [fit1_POS,gof1_POS] = getBestFit(M1_POS, in_POS, 'Motor 1 POS');
-    [fit2_POS,gof2_POS] = getBestFit(M2_POS, in_POS, 'Motor 2 POS');
-    [fit3_POS,gof3_POS] = getBestFit(M3_POS, in_POS, 'Motor 3 POS');
-    [fit4_POS,gof4_POS] = getBestFit(M4_POS, in_POS, 'Motor 4 POS');
-    [fit1_NEG,gof1_NEG] = getBestFit(M1_NEG, in_NEG, 'Motor 1 NEG');
-    [fit2_NEG,gof2_NEG] = getBestFit(M2_NEG, in_NEG, 'Motor 2 NEG');
-    [fit3_NEG,gof3_NEG] = getBestFit(M3_NEG, in_NEG, 'Motor 3 NEG');
-    [fit4_NEG,gof1_NEG] = getBestFit(M4_NEG, in_NEG, 'Motor 4 NEG');
+    hold on
+    grid on
+    y1 = 0.5291 * x1 + 9.435; %POS
+    y2 = 0.5307 * x2 - 8.969; %NEG
+    a2 = plot(x1,y1,'-ro', 'lineWidth', 1.5); M2 = 'Positive Curve';
+    a3 = plot(x2,y2,'-m*', 'lineWidth', 1.5); M3 = 'Negative Curve';    
+   
+    legend([a1;a2;a3], M1, M2, M3, 'Location', 'northwest')
+    
+    %Motor 2
+    figure;
+    %plot(in,M1,'-','LineWidth',2);
+    a1 = plot(dataS(:,3),dataS(:,1),'-','lineWidth', 1.5); M1 = 'real data';
+    title('PWM x Speed - Motor 2');
+    ylabel('PWM (%dutyCycle)');
+    xlabel('Speed (rad/s)');
+    hold on
+    x1 = 1:8:140;
+    x2 = -140:8:-1;
+
+    hold on
+    grid on
+    y1 = 0.5234 * x1 + 9.552; %POS
+    y2 = 0.5278 * x2 - 9.460;  %NEG
+    a2 = plot(x1,y1,'-ro', 'lineWidth', 1.1); M2 = 'Positive Curve';
+    a3 = plot(x2,y2,'-m*', 'lineWidth', 1.1); M3 = 'Negative Curve';    
+   
+    legend([a1;a2;a3], M1, M2, M3, 'Location', 'northwest')
+    
+    %Motor 3
+    figure;
+    %plot(in,M1,'-','LineWidth',2);
+    a1 = plot(dataS(:,4),dataS(:,1),'-','lineWidth', 1.5); M1 = 'real data';
+    title('PWM x Speed - Motor 3');
+    ylabel('PWM (%dutyCycle)');
+    xlabel('Speed (rad/s)');
+    hold on
+    x1 = 1:8:140;
+    x2 = -140:8:-1;
+
+    hold on
+    grid on
+    y1 = 0.525 * x1 + 9.294;
+    y2 = 0.5231 * x2 -9.414;
+    a2 = plot(x1,y1,'-ro', 'lineWidth', 1.1); M2 = 'Positive Curve';
+    a3 = plot(x2,y2,'-m*', 'lineWidth', 1.1); M3 = 'Negative Curve';    
+   
+    legend([a1;a2;a3], M1, M2, M3, 'Location', 'northwest')
+    
+    %Motor 4
+    figure;
+    %plot(in,M1,'-','LineWidth',2);
+    a1 = plot(dataS(:,5),dataS(:,1),'-','lineWidth', 1.5); M1 = 'real data';
+    title('PWM x Speed - Motor 4');
+    ylabel('PWM (%dutyCycle)');
+    xlabel('Speed (rad/s)');
+    hold on
+    x1 = 1:8:140;
+    x2 = -140:8:-1;
+
+    hold on
+    grid on
+    y1 = 0.5257 * x1 + 9.304;
+    y2 = 0.5275 * x2 - 9.467;
+    a2 = plot(x1,y1,'-ro', 'lineWidth', 1.1); M2 = 'Positive Curve';
+    a3 = plot(x2,y2,'-m*', 'lineWidth', 1.1); M3 = 'Negative Curve';    
+   
+    legend([a1;a2;a3], M1, M2, M3, 'Location', 'northwest')
+    [fit1_POS,gof1_POS] = getBestFit(M1_POS, in_POS, 'Motor 1 - Positive Curve');
+    [fit2_POS,gof2_POS] = getBestFit(M2_POS, in_POS, 'Motor 2 - Positive Curve');
+    [fit3_POS,gof3_POS] = getBestFit(M3_POS, in_POS, 'Motor 3 - Positive Curve');
+    [fit4_POS,gof4_POS] = getBestFit(M4_POS, in_POS, 'Motor 4 - Positive Curve');
+    [fit1_NEG,gof1_NEG] = getBestFit(M1_NEG, in_NEG, 'Motor 1 - Negative Curve');
+    [fit2_NEG,gof2_NEG] = getBestFit(M2_NEG, in_NEG, 'Motor 2 - Negative Curve');
+    [fit3_NEG,gof3_NEG] = getBestFit(M3_NEG, in_NEG, 'Motor 3 - Negative Curve');
+    [fit4_NEG,gof1_NEG] = getBestFit(M4_NEG, in_NEG ,'Motor 4 - Negative Curve2_');
 
 
-    figure; 
-    plot(fit1_POS,M1_POS,in_POS);
+    %figure; 
+    %plot(fit1_POS,M1_POS,in_POS);
 elseif strcmpi('DRIB',MODE)
     inD = csvread('INPUT_DRIBBLER_30_08_19.csv');
 	M5 = csvread('M5_DRIBBLER_30_08_19.csv');    

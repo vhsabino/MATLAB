@@ -130,3 +130,11 @@ M4 =  vertcat(M4_1, M4_2, M4_3, M4_4);
 
 z1 = iddata(M1D, inD, 0.002);
 z2 = iddata(M1V, inV, 0.002);
+
+figure;
+OPT_TIME = iddataPlotOptions('time');
+OPT_TIME.Grid = 'on';
+OPT_TIME.Title.String = 'Input-Output Data - Motor 4';
+OPT_TIME.Title.FontSize = 12;
+OPT_TIME.Title.FontWeight = 'bold';
+plot(z1,OPT_TIME);
