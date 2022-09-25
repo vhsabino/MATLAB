@@ -1,19 +1,16 @@
-results1 = zeros(30000,1, 'double');
-results2 = zeros(30000,1, 'double');
-results3 = zeros(30000,1, 'double');
-results4 = zeros(30000,1, 'double');
-input = zeros(30000, 1, 'double');
+results1 = zeros(201, 1, 'double');
+results2 = zeros(201, 1, 'double');
+input = zeros(201, 1, 'double');
 delete(instrfindall);
 try
     
-    nucleo144 = serial('COM15','BaudRate',460800);
+    nucleo144 = serial('COM8','BaudRate',115200);
+    %nucleo144 = serialport('COM8',115200);
     fopen(nucleo144);
-    for i = 1:30000
+    for i = 1:201
         input(i,1) = fscanf(nucleo144,'%f');
         results1(i,1) = fscanf(nucleo144,'%f');
         results2(i,1) = fscanf(nucleo144,'%f');
-        results3(i,1) = fscanf(nucleo144,'%f');
-        results4(i,1) = fscanf(nucleo144,'%f');
         disp(input(i,1));
     end
     %for i = 1:300
