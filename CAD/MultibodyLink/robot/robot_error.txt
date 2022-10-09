@@ -1,0 +1,9 @@
+Constrained Instances: 'Golfball:1', 'grass:1'
+Constraint Name: Tangent:1
+Error Details: Constraint is not supported. The constraint has been exported as unknown constraint.
+---------------------------------------------------------------------------------
+Constrained Instances: 'Golfball:1', 'first_floor:1/Dribbler-3-gears-new:1'
+Constraint Name: Tangent:2
+Error Details: Constraint is not supported. The constraint has been exported as unknown constraint.
+---------------------------------------------------------------------------------
+

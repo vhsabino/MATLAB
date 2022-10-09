@@ -1,0 +1,145 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no" ?>
+<SimscapeMultibodyImportXML version="2.0" xmlns="urn:mathworks:SimscapeMultibody:import" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+<Created by="victo" on="08/10/22||09:46:12" using="Simscape Multibody Link Version 7.4" from="Autodesk Inventor 2021 (Build 250183000, 183)"/>
+<ModelUnits mass="lbmass" length="millimeter"/>
+<DataUnits mass="kilogram" length="centimeter"/>
+<RootAssembly name="first_floor_simplified.iam" uid="first_floor_simplified.iam_{EE696F15-4C1E-23FE-92C1-449BE60775A4}" version="{4C66358B-32C8-8E6B-E571-6A909EFFDDEC}">
+<AssemblyFile name="first_floor_simplified.iam" type="Inventor Assembly"/>
+<InstanceTree>
+<Instance name="Base_RoboCIn_simplified:1" grounded="true" uid="Base_RoboCIn_simplified:1" entityUid="Base_RoboCIn_simplified.ipt_{80388B35-4D35-EBA0-A118-E9ACF8801021}">
+<Transform>
+<Rotation>1 0 0 0 1 0 0 0 1</Rotation>
+<Translation>0 0 0</Translation>
+</Transform>
+</Instance>
+<Instance name="wheel_simplified:1" uid="wheel_simplified:1" entityUid="wheel_simplified.ipt_{4540ABE7-4BDF-DB8A-B216-62BCB0240894}">
+<Transform>
+<Rotation>0,97687454953886033 0,11192434614767569 0,18217863541771687 -0,11688882002970999 0,99300440789055988 0,016710764853193037 -0,17903384656345925 -0,037618966617012549 0,98312343840199434</Rotation>
+<Translation>7,1447095812216244 -4,125 1,9499999999999995</Translation>
+</Transform>
+</Instance>
+<Instance name="wheel_simplified:2" uid="wheel_simplified:2" entityUid="wheel_simplified.ipt_{4540ABE7-4BDF-DB8A-B216-62BCB0240894}">
+<Transform>
+<Rotation>0,99999999999999944 1,110223024625156e-16 0 0 0,99999999999999956 0 0 0 0,99999999999999944</Rotation>
+<Translation>5,8336309447890224 5,8336309447890207 1,9500000000000002</Translation>
+</Transform>
+</Instance>
+<Instance name="wheel_simplified:3" uid="wheel_simplified:3" entityUid="wheel_simplified.ipt_{4540ABE7-4BDF-DB8A-B216-62BCB0240894}">
+<Transform>
+<Rotation>1,0000000000000004 2,7755575615628923e-16 7,5841982807768229e-16 -5,8286708792820758e-16 1,0000000000000007 1,9411932803486602e-16 0 -2,8449465006019626e-16 1,0000000000000011</Rotation>
+<Translation>-7,1447095812216208 -4,125 1,9500000000000011</Translation>
+</Transform>
+</Instance>
+<Instance name="wheel_simplified:4" uid="wheel_simplified:4" entityUid="wheel_simplified.ipt_{4540ABE7-4BDF-DB8A-B216-62BCB0240894}">
+<Transform>
+<Rotation>0,99999999999999978 1,6653345369377348e-16 1,6133920199402429e-16 -3,3306690738754691e-16 0,99999999999999978 0 -1,9428902930940244e-16 0 1,0000000000000002</Rotation>
+<Translation>-5,8336309447890207 5,8336309447890207 1,9500000000000002</Translation>
+</Transform>
+</Instance>
+</InstanceTree>
+<Constraints>
+<Coincident name="Mate:1">
+<ConstraintGeometry geomType="sphere">
+<InstancePath>
+<Uid>wheel_simplified:3</Uid>
+</InstancePath>
+<Position>0 0 0</Position>
+<Axis>0 0 0</Axis>
+</ConstraintGeometry>
+<ConstraintGeometry geomType="sphere">
+<InstancePath>
+<Uid>Base_RoboCIn_simplified:1</Uid>
+</InstancePath>
+<Position>-7,1447095812216208 -4,125 1,9500000000000002</Position>
+<Axis>0 0 0</Axis>
+</ConstraintGeometry>
+</Coincident>
+<Coincident name="Mate:2">
+<ConstraintGeometry geomType="sphere">
+<InstancePath>
+<Uid>wheel_simplified:1</Uid>
+</InstancePath>
+<Position>-1,7763568394002505e-15 4,4408920985006262e-16 0</Position>
+<Axis>0 0 0</Axis>
+</ConstraintGeometry>
+<ConstraintGeometry geomType="sphere">
+<InstancePath>
+<Uid>Base_RoboCIn_simplified:1</Uid>
+</InstancePath>
+<Position>7,1447095812216208 -4,125 1,9500000000000002</Position>
+<Axis>0 0 0</Axis>
+</ConstraintGeometry>
+</Coincident>
+<Coincident name="Mate:3">
+<ConstraintGeometry geomType="sphere">
+<InstancePath>
+<Uid>wheel_simplified:2</Uid>
+</InstancePath>
+<Position>0 0 -2,2204460492503131e-16</Position>
+<Axis>0 0 0</Axis>
+</ConstraintGeometry>
+<ConstraintGeometry geomType="sphere">
+<InstancePath>
+<Uid>Base_RoboCIn_simplified:1</Uid>
+</InstancePath>
+<Position>5,8336309447890207 5,8336309447890207 1,9500000000000002</Position>
+<Axis>0 0 0</Axis>
+</ConstraintGeometry>
+</Coincident>
+<Coincident name="Mate:4">
+<ConstraintGeometry geomType="sphere">
+<InstancePath>
+<Uid>wheel_simplified:4</Uid>
+</InstancePath>
+<Position>0 0 0</Position>
+<Axis>0 0 0</Axis>
+</ConstraintGeometry>
+<ConstraintGeometry geomType="sphere">
+<InstancePath>
+<Uid>Base_RoboCIn_simplified:1</Uid>
+</InstancePath>
+<Position>-5,8336309447890207 5,8336309447890207 1,9500000000000002</Position>
+<Axis>0 0 0</Axis>
+</ConstraintGeometry>
+</Coincident>
+</Constraints>
+<Joints>
+</Joints>
+</RootAssembly>
+<Assemblies>
+</Assemblies>
+<Parts>
+<Part name="Base_RoboCIn_simplified.ipt" uid="Base_RoboCIn_simplified.ipt_{80388B35-4D35-EBA0-A118-E9ACF8801021}" version="{E159AF74-072E-B7FD-965F-A87513104EF6}">
+<PartFile name="Base_RoboCIn_simplified.ipt" type="Inventor Part"/>
+<MassProperties>
+<Mass>0,74805236387592178</Mass>
+<CenterOfMass>0,00012034633546569681 1,1484154354061613 2,5247670179371076</CenterOfMass>
+<Inertia>13,780177442953038 16,583849569003192 26,262472458889597 -0,27897816165690531 0,00012018116698958064 0,00072023337058572836</Inertia>
+</MassProperties>
+<GeometryFile name="Base_RoboCIn_simplified_ipt_595d84b8.STL" type="STL"/>
+<VisualProperties>
+<Ambient r="0,74901960784313726" g="0,74901960784313726" b="0,74901960784313726" a="1"/>
+<Diffuse r="0,74901960784313726" g="0,74901960784313726" b="0,74901960784313726" a="1"/>
+<Specular r="0" g="0" b="0" a="1"/>
+<Emissive r="0" g="0" b="0" a="1"/>
+<Shininess>0,14999999999999999</Shininess>
+</VisualProperties>
+</Part>
+<Part name="wheel_simplified.ipt" uid="wheel_simplified.ipt_{4540ABE7-4BDF-DB8A-B216-62BCB0240894}" version="{7FC0A8A8-29E7-66E5-1DE5-64611A349914}">
+<PartFile name="wheel_simplified.ipt" type="Inventor Part"/>
+<MassProperties>
+<Mass>0,063505921045531724</Mass>
+<CenterOfMass>0 0 0</CenterOfMass>
+<Inertia>0,15560538304181432 0,15560538304181432 0,15560538304181432 0 0 0</Inertia>
+</MassProperties>
+<GeometryFile name="wheel_simplified_ipt_ce79b2a0.STL" type="STL"/>
+<VisualProperties>
+<Ambient r="0,74901960784313726" g="0,74901960784313726" b="0,74901960784313726" a="1"/>
+<Diffuse r="0,74901960784313726" g="0,74901960784313726" b="0,74901960784313726" a="1"/>
+<Specular r="0" g="0" b="0" a="1"/>
+<Emissive r="0" g="0" b="0" a="1"/>
+<Shininess>0,14999999999999999</Shininess>
+</VisualProperties>
+</Part>
+</Parts>
+</SimscapeMultibodyImportXML>

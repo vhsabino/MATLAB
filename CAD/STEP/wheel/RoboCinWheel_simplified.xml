@@ -1,0 +1,802 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no" ?>
+<SimscapeMultibodyImportXML version="2.0" xmlns="urn:mathworks:SimscapeMultibody:import" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+<Created by="victo" on="09/29/22||20:06:09" using="Simscape Multibody Link Version 7.4" from="Autodesk Inventor 2021 (Build 250183000, 183)"/>
+<ModelUnits mass="kilogram" length="millimeter"/>
+<DataUnits mass="kilogram" length="centimeter"/>
+<RootAssembly name="RoboCinWheel_simplified.iam" uid="RoboCinWheel_simplified.iam_{5CD14B82-42B2-9D40-1A94-FDBAEFC64141}" version="{7AC94A51-A8C3-1E9A-9D7A-B146DBEB67BC}">
+<AssemblyFile name="RoboCinWheel_simplified.iam" type="Inventor Assembly"/>
+<InstanceTree>
+<Instance name="wheel_simplified2:1" grounded="true" uid="wheel_simplified2:1" entityUid="wheel_simplified2.ipt_{FC343ECF-4ED8-3639-0595-D7B9B3DF5A9A}">
+<Transform>
+<Rotation>1 0 0 0 1 0 0 0 1</Rotation>
+<Translation>0 0 0</Translation>
+</Transform>
+</Instance>
+<Instance name="gear_z60_26106000_simplified:1" uid="gear_z60_26106000_simplified:1" entityUid="gear_z60_26106000_simplified.ipt_{A3997E71-4B0D-06D3-12BD-059450D7D968}">
+<Transform>
+<Rotation>0 -0.76604444311899345 0.64278760968652082 0 0.64278760968652082 0.76604444311899345 -1 0 0</Rotation>
+<Translation>0 0 -0.20000000000000001</Translation>
+</Transform>
+</Instance>
+<Instance name="Roller:1" uid="Roller:1" entityUid="Roller.iam_{E4DDFF8D-4A29-BA0F-C525-0EA63CB26BEE}" rigid="true">
+<Transform>
+<Rotation>0 -0.34202014332566893 0.93969262078590843 0 -0.93969262078590843 -0.34202014332566893 1 0 0</Rotation>
+<Translation>0.69577291178464962 1.9116203641965135 0.39000000000000012</Translation>
+</Transform>
+<Instance name="Roller:1" grounded="true" uid="Roller:1" entityUid="Roller.ipt_{2C102C11-4343-AF32-459C-5F97DD88C180}">
+<Transform>
+<Rotation>1 0 0 0 1 0 0 0 1</Rotation>
+<Translation>0 0 -1.1102230246251546e-16</Translation>
+</Transform>
+</Instance>
+<Instance name="RollerTire:1" uid="RollerTire:1" entityUid="RollerTire.ipt_{E1A9B439-4457-1BB5-0D31-0D917DF380D3}">
+<Transform>
+<Rotation>1 0 0 0 1 0 0 0 1</Rotation>
+<Translation>0 0 -1.1102230246251546e-16</Translation>
+</Transform>
+</Instance>
+</Instance>
+<Instance name="Roller:2" uid="Roller:2" entityUid="Roller.iam_{E4DDFF8D-4A29-BA0F-C525-0EA63CB26BEE}" rigid="true">
+<Transform>
+<Rotation>0 0.64278760968653958 0.7660444431189779 0 0.7660444431189779 -0.64278760968653958 -1 0 0</Rotation>
+<Translation>1.3076253418935182 1.5583671989688308 0.39000000000000012</Translation>
+</Transform>
+<Instance name="Roller:1" grounded="true" uid="Roller:1" entityUid="Roller.ipt_{2C102C11-4343-AF32-459C-5F97DD88C180}">
+<Transform>
+<Rotation>1 0 0 0 1 0 0 0 1</Rotation>
+<Translation>0 0 0</Translation>
+</Transform>
+</Instance>
+<Instance name="RollerTire:1" uid="RollerTire:1" entityUid="RollerTire.ipt_{E1A9B439-4457-1BB5-0D31-0D917DF380D3}">
+<Transform>
+<Rotation>1 0 0 0 1 0 0 0 1</Rotation>
+<Translation>0 0 0</Translation>
+</Transform>
+</Instance>
+</Instance>
+<Instance name="Roller:3" uid="Roller:3" entityUid="Roller.iam_{E4DDFF8D-4A29-BA0F-C525-0EA63CB26BEE}" rigid="true">
+<Transform>
+<Rotation>-0.083517505409805265 0.86198887828679294 0.49999999999999983 -0.048218854230397006 0.49766951091734318 -0.86602540378443893 -0.9953390218346867 -0.09643770846079415 0</Rotation>
+<Translation>1.7617588572753298 1.0171519504951192 0.39000000000000012</Translation>
+</Transform>
+<Instance name="Roller:1" grounded="true" uid="Roller:1" entityUid="Roller.ipt_{2C102C11-4343-AF32-459C-5F97DD88C180}">
+<Transform>
+<Rotation>1 0 0 0 1 0 0 0 1</Rotation>
+<Translation>0 0 1.1102230246251546e-16</Translation>
+</Transform>
+</Instance>
+<Instance name="RollerTire:1" uid="RollerTire:1" entityUid="RollerTire.ipt_{E1A9B439-4457-1BB5-0D31-0D917DF380D3}">
+<Transform>
+<Rotation>1 0 0 0 1 0 0 0 1</Rotation>
+<Translation>0 0 1.1102230246251546e-16</Translation>
+</Transform>
+</Instance>
+</Instance>
+<Instance name="Roller:4" uid="Roller:4" entityUid="Roller.iam_{E4DDFF8D-4A29-BA0F-C525-0EA63CB26BEE}" rigid="true">
+<Transform>
+<Rotation>0 -0.98480775301220813 0.17364817766693033 0 -0.17364817766693033 -0.98480775301220813 1 0 0</Rotation>
+<Translation>2.0033982536781663 0.35325316522768158 0.38999999999999968</Translation>
+</Transform>
+<Instance name="Roller:1" grounded="true" uid="Roller:1" entityUid="Roller.ipt_{2C102C11-4343-AF32-459C-5F97DD88C180}">
+<Transform>
+<Rotation>1 0 0 0 0.99999999999999989 0 0 0 0.99999999999999989</Rotation>
+<Translation>0 0 0</Translation>
+</Transform>
+</Instance>
+<Instance name="RollerTire:1" uid="RollerTire:1" entityUid="RollerTire.ipt_{E1A9B439-4457-1BB5-0D31-0D917DF380D3}">
+<Transform>
+<Rotation>1 0 0 0 0.99999999999999989 0 0 0 0.99999999999999989</Rotation>
+<Translation>0 0 0</Translation>
+</Transform>
+</Instance>
+</Instance>
+<Instance name="Roller:5" uid="Roller:5" entityUid="Roller.iam_{E4DDFF8D-4A29-BA0F-C525-0EA63CB26BEE}" rigid="true">
+<Transform>
+<Rotation>0 -0.98480775301220813 -0.17364817766693047 0 0.17364817766693047 -0.98480775301220813 0.99999999999999978 0 0</Rotation>
+<Translation>2.0033982536781658 -0.35325316522768235 0.39000000000000012</Translation>
+</Transform>
+<Instance name="Roller:1" grounded="true" uid="Roller:1" entityUid="Roller.ipt_{2C102C11-4343-AF32-459C-5F97DD88C180}">
+<Transform>
+<Rotation>1 0 0 0 1 0 0 0 1</Rotation>
+<Translation>0 0 0</Translation>
+</Transform>
+</Instance>
+<Instance name="RollerTire:1" uid="RollerTire:1" entityUid="RollerTire.ipt_{E1A9B439-4457-1BB5-0D31-0D917DF380D3}">
+<Transform>
+<Rotation>1 0 0 0 1 0 0 0 1</Rotation>
+<Translation>0 0 0</Translation>
+</Transform>
+</Instance>
+</Instance>
+<Instance name="Roller:6" uid="Roller:6" entityUid="Roller.iam_{E4DDFF8D-4A29-BA0F-C525-0EA63CB26BEE}" rigid="true">
+<Transform>
+<Rotation>0 -0.86602540378443882 -0.50000000000000022 0 0.50000000000000033 -0.8660254037844386 1 0 0</Rotation>
+<Translation>1.7617588572753293 -1.0171519504951203 0.39000000000000012</Translation>
+</Transform>
+<Instance name="Roller:1" grounded="true" uid="Roller:1" entityUid="Roller.ipt_{2C102C11-4343-AF32-459C-5F97DD88C180}">
+<Transform>
+<Rotation>1 0 0 0 1 0 0 0 1</Rotation>
+<Translation>0 -4.4408920985006262e-16 0</Translation>
+</Transform>
+</Instance>
+<Instance name="RollerTire:1" uid="RollerTire:1" entityUid="RollerTire.ipt_{E1A9B439-4457-1BB5-0D31-0D917DF380D3}">
+<Transform>
+<Rotation>1 0 0 0 1 0 0 0 1</Rotation>
+<Translation>0 -4.4408920985006262e-16 0</Translation>
+</Transform>
+</Instance>
+</Instance>
+<Instance name="Roller:7" uid="Roller:7" entityUid="Roller.iam_{E4DDFF8D-4A29-BA0F-C525-0EA63CB26BEE}" rigid="true">
+<Transform>
+<Rotation>0 0.64278760968653947 -0.76604444311897779 0 -0.76604444311897812 -0.64278760968653947 -1 0 0</Rotation>
+<Translation>1.3076253418935175 -1.5583671989688317 0.38999999999999968</Translation>
+</Transform>
+<Instance name="Roller:1" grounded="true" uid="Roller:1" entityUid="Roller.ipt_{2C102C11-4343-AF32-459C-5F97DD88C180}">
+<Transform>
+<Rotation>1 0 0 0 1 0 0 0 1</Rotation>
+<Translation>0 0 0</Translation>
+</Transform>
+</Instance>
+<Instance name="RollerTire:1" uid="RollerTire:1" entityUid="RollerTire.ipt_{E1A9B439-4457-1BB5-0D31-0D917DF380D3}">
+<Transform>
+<Rotation>1 0 0 0 1 0 0 0 1</Rotation>
+<Translation>0 0 0</Translation>
+</Transform>
+</Instance>
+</Instance>
+<Instance name="Roller:8" uid="Roller:8" entityUid="Roller.iam_{E4DDFF8D-4A29-BA0F-C525-0EA63CB26BEE}" rigid="true">
+<Transform>
+<Rotation>0 -0.34202014332566871 -0.93969262078590843 0 0.93969262078590843 -0.34202014332566871 1 0 0</Rotation>
+<Translation>0.69577291178464806 -1.9116203641965139 0.39000000000000012</Translation>
+</Transform>
+<Instance name="Roller:1" grounded="true" uid="Roller:1" entityUid="Roller.ipt_{2C102C11-4343-AF32-459C-5F97DD88C180}">
+<Transform>
+<Rotation>1 0 0 0 1 0 0 0 1</Rotation>
+<Translation>0 0 0</Translation>
+</Transform>
+</Instance>
+<Instance name="RollerTire:1" uid="RollerTire:1" entityUid="RollerTire.ipt_{E1A9B439-4457-1BB5-0D31-0D917DF380D3}">
+<Transform>
+<Rotation>1 0 0 0 1 0 0 0 1</Rotation>
+<Translation>0 0 0</Translation>
+</Transform>
+</Instance>
+</Instance>
+<Instance name="Roller:9" uid="Roller:9" entityUid="Roller.iam_{E4DDFF8D-4A29-BA0F-C525-0EA63CB26BEE}" rigid="true">
+<Transform>
+<Rotation>0 0 -1 -0.22874191222009044 0.97348710191450227 0 0.97348710191450227 0.22874191222009044 0</Rotation>
+<Translation>-3.0531133177191795e-16 -2.0343039009902384 0.39000000000000007</Translation>
+</Transform>
+<Instance name="Roller:1" grounded="true" uid="Roller:1" entityUid="Roller.ipt_{2C102C11-4343-AF32-459C-5F97DD88C180}">
+<Transform>
+<Rotation>1 0 0 0 1 0 0 0 1</Rotation>
+<Translation>0 0 0</Translation>
+</Transform>
+</Instance>
+<Instance name="RollerTire:1" uid="RollerTire:1" entityUid="RollerTire.ipt_{E1A9B439-4457-1BB5-0D31-0D917DF380D3}">
+<Transform>
+<Rotation>1 0 0 0 1 0 0 0 1</Rotation>
+<Translation>0 0 0</Translation>
+</Transform>
+</Instance>
+</Instance>
+<Instance name="Roller:10" uid="Roller:10" entityUid="Roller.iam_{E4DDFF8D-4A29-BA0F-C525-0EA63CB26BEE}" rigid="true">
+<Transform>
+<Rotation>-0.27959174372986562 0.1969929828156439 -0.93969262078590809 -0.7681720025637474 0.54123377207699319 0.34202014332566932 0.57596894995763026 0.81747157056664954 -1.1102230246251565e-16</Rotation>
+<Translation>-0.69577291178464873 -1.9116203641965139 0.38999999999999996</Translation>
+</Transform>
+<Instance name="Roller:1" grounded="true" uid="Roller:1" entityUid="Roller.ipt_{2C102C11-4343-AF32-459C-5F97DD88C180}">
+<Transform>
+<Rotation>1 0 0 0 1 0 0 0 1.0000000000000002</Rotation>
+<Translation>0 2.2204460492503131e-16 1.1102230246251595e-16</Translation>
+</Transform>
+</Instance>
+<Instance name="RollerTire:1" uid="RollerTire:1" entityUid="RollerTire.ipt_{E1A9B439-4457-1BB5-0D31-0D917DF380D3}">
+<Transform>
+<Rotation>1 0 0 0 1 0 0 0 1.0000000000000002</Rotation>
+<Translation>0 2.2204460492503131e-16 1.1102230246251595e-16</Translation>
+</Transform>
+</Instance>
+</Instance>
+<Instance name="Roller:11" uid="Roller:11" entityUid="Roller.iam_{E4DDFF8D-4A29-BA0F-C525-0EA63CB26BEE}" rigid="true">
+<Transform>
+<Rotation>0 0.98480775301220813 -0.17364817766693 0 0.17364817766693003 0.98480775301220791 1 0 0</Rotation>
+<Translation>-2.0033982536781658 -0.35325316522768219 0.39000000000000012</Translation>
+</Transform>
+<Instance name="Roller:1" grounded="true" uid="Roller:1" entityUid="Roller.ipt_{2C102C11-4343-AF32-459C-5F97DD88C180}">
+<Transform>
+<Rotation>1 0 0 0 1 0 0 0 1</Rotation>
+<Translation>0 0 0</Translation>
+</Transform>
+</Instance>
+<Instance name="RollerTire:1" uid="RollerTire:1" entityUid="RollerTire.ipt_{E1A9B439-4457-1BB5-0D31-0D917DF380D3}">
+<Transform>
+<Rotation>1 0 0 0 1 0 0 0 1</Rotation>
+<Translation>0 0 0</Translation>
+</Transform>
+</Instance>
+</Instance>
+<Instance name="Roller:12" uid="Roller:12" entityUid="Roller.iam_{E4DDFF8D-4A29-BA0F-C525-0EA63CB26BEE}" rigid="true">
+<Transform>
+<Rotation>0 -0.86602540378443893 -0.50000000000000022 0 -0.50000000000000022 0.86602540378443893 -1.0000000000000002 0 0</Rotation>
+<Translation>-1.76175885727533 -1.0171519504951188 0.39000000000000057</Translation>
+</Transform>
+<Instance name="Roller:1" grounded="true" uid="Roller:1" entityUid="Roller.ipt_{2C102C11-4343-AF32-459C-5F97DD88C180}">
+<Transform>
+<Rotation>1 0 0 0 1 0 0 0 1</Rotation>
+<Translation>0 0 0</Translation>
+</Transform>
+</Instance>
+<Instance name="RollerTire:1" uid="RollerTire:1" entityUid="RollerTire.ipt_{E1A9B439-4457-1BB5-0D31-0D917DF380D3}">
+<Transform>
+<Rotation>1 0 0 0 1 0 0 0 1</Rotation>
+<Translation>0 0 0</Translation>
+</Transform>
+</Instance>
+</Instance>
+<Instance name="Roller:13" uid="Roller:13" entityUid="Roller.iam_{E4DDFF8D-4A29-BA0F-C525-0EA63CB26BEE}" rigid="true">
+<Transform>
+<Rotation>0 -0.6427876096865397 -0.7660444431189779 0 -0.7660444431189779 0.6427876096865397 -1 0 0</Rotation>
+<Translation>-1.307625341893518 -1.5583671989688317 0.39000000000000012</Translation>
+</Transform>
+<Instance name="Roller:1" grounded="true" uid="Roller:1" entityUid="Roller.ipt_{2C102C11-4343-AF32-459C-5F97DD88C180}">
+<Transform>
+<Rotation>1 0 0 0 1 0 0 0 1</Rotation>
+<Translation>0 0 -2.2204460492503141e-16</Translation>
+</Transform>
+</Instance>
+<Instance name="RollerTire:1" uid="RollerTire:1" entityUid="RollerTire.ipt_{E1A9B439-4457-1BB5-0D31-0D917DF380D3}">
+<Transform>
+<Rotation>1 0 0 0 1 0 0 0 1</Rotation>
+<Translation>0 0 -2.2204460492503141e-16</Translation>
+</Transform>
+</Instance>
+</Instance>
+<Instance name="Roller:14" uid="Roller:14" entityUid="Roller.iam_{E4DDFF8D-4A29-BA0F-C525-0EA63CB26BEE}" rigid="true">
+<Transform>
+<Rotation>0 0.8660254037844386 0.50000000000000067 0 -0.50000000000000056 0.8660254037844386 1.0000000000000002 0 0</Rotation>
+<Translation>-1.7617588572753304 1.0171519504951199 0.39000000000000012</Translation>
+</Transform>
+<Instance name="Roller:1" grounded="true" uid="Roller:1" entityUid="Roller.ipt_{2C102C11-4343-AF32-459C-5F97DD88C180}">
+<Transform>
+<Rotation>1 0 0 0 1.0000000000000002 0 0 0 1.0000000000000002</Rotation>
+<Translation>0 0 1.1102230246251516e-16</Translation>
+</Transform>
+</Instance>
+<Instance name="RollerTire:1" uid="RollerTire:1" entityUid="RollerTire.ipt_{E1A9B439-4457-1BB5-0D31-0D917DF380D3}">
+<Transform>
+<Rotation>1 0 0 0 1.0000000000000002 0 0 0 1.0000000000000002</Rotation>
+<Translation>0 0 1.1102230246251516e-16</Translation>
+</Transform>
+</Instance>
+</Instance>
+<Instance name="Roller:15" uid="Roller:15" entityUid="Roller.iam_{E4DDFF8D-4A29-BA0F-C525-0EA63CB26BEE}" rigid="true">
+<Transform>
+<Rotation>0 -0.64278760968653947 0.76604444311897812 0 0.76604444311897812 0.64278760968653947 -1 0 0</Rotation>
+<Translation>-1.3076253418935173 1.5583671989688319 0.39000000000000024</Translation>
+</Transform>
+<Instance name="Roller:1" grounded="true" uid="Roller:1" entityUid="Roller.ipt_{2C102C11-4343-AF32-459C-5F97DD88C180}">
+<Transform>
+<Rotation>1 0 0 0 1 0 0 0 1</Rotation>
+<Translation>0 0 2.2204460492503136e-16</Translation>
+</Transform>
+</Instance>
+<Instance name="RollerTire:1" uid="RollerTire:1" entityUid="RollerTire.ipt_{E1A9B439-4457-1BB5-0D31-0D917DF380D3}">
+<Transform>
+<Rotation>1 0 0 0 1 0 0 0 1</Rotation>
+<Translation>0 0 2.2204460492503136e-16</Translation>
+</Transform>
+</Instance>
+</Instance>
+<Instance name="Roller:16" uid="Roller:16" entityUid="Roller.iam_{E4DDFF8D-4A29-BA0F-C525-0EA63CB26BEE}" rigid="true">
+<Transform>
+<Rotation>0 0.98480775301220791 0.17364817766693028 0 -0.17364817766693028 0.98480775301220791 1 0 0</Rotation>
+<Translation>-2.0033982536781658 0.35325316522768285 0.39000000000000057</Translation>
+</Transform>
+<Instance name="Roller:1" grounded="true" uid="Roller:1" entityUid="Roller.ipt_{2C102C11-4343-AF32-459C-5F97DD88C180}">
+<Transform>
+<Rotation>1 0 0 0 1.0000000000000002 0 0 0 1.0000000000000002</Rotation>
+<Translation>0 0 0</Translation>
+</Transform>
+</Instance>
+<Instance name="RollerTire:1" uid="RollerTire:1" entityUid="RollerTire.ipt_{E1A9B439-4457-1BB5-0D31-0D917DF380D3}">
+<Transform>
+<Rotation>1 0 0 0 1.0000000000000002 0 0 0 1.0000000000000002</Rotation>
+<Translation>0 0 0</Translation>
+</Transform>
+</Instance>
+</Instance>
+<Instance name="Roller:17" uid="Roller:17" entityUid="Roller.iam_{E4DDFF8D-4A29-BA0F-C525-0EA63CB26BEE}" rigid="true">
+<Transform>
+<Rotation>0 0.34202014332566877 0.93969262078590865 1.0080716846043883e-16 -0.93969262078590865 0.34202014332566866 1 0 0</Rotation>
+<Translation>-0.69577291178464795 1.9116203641965144 0.39000000000000001</Translation>
+</Transform>
+<Instance name="Roller:1" grounded="true" uid="Roller:1" entityUid="Roller.ipt_{2C102C11-4343-AF32-459C-5F97DD88C180}">
+<Transform>
+<Rotation>1 0 0 0 1 0 0 0 1</Rotation>
+<Translation>0 0 0</Translation>
+</Transform>
+</Instance>
+<Instance name="RollerTire:1" uid="RollerTire:1" entityUid="RollerTire.ipt_{E1A9B439-4457-1BB5-0D31-0D917DF380D3}">
+<Transform>
+<Rotation>1 0 0 0 1 0 0 0 1</Rotation>
+<Translation>0 0 0</Translation>
+</Transform>
+</Instance>
+</Instance>
+<Instance name="Roller:18" uid="Roller:18" entityUid="Roller.iam_{E4DDFF8D-4A29-BA0F-C525-0EA63CB26BEE}" rigid="true">
+<Transform>
+<Rotation>0 0 1.0000000000000002 0 -1.0000000000000002 0 1.0000000000000002 0 0</Rotation>
+<Translation>0 2.0343039009902379 0.39000000000000012</Translation>
+</Transform>
+<Instance name="Roller:1" grounded="true" uid="Roller:1" entityUid="Roller.ipt_{2C102C11-4343-AF32-459C-5F97DD88C180}">
+<Transform>
+<Rotation>1 0 0 0 1 0 0 0 1</Rotation>
+<Translation>0 0 0</Translation>
+</Transform>
+</Instance>
+<Instance name="RollerTire:1" uid="RollerTire:1" entityUid="RollerTire.ipt_{E1A9B439-4457-1BB5-0D31-0D917DF380D3}">
+<Transform>
+<Rotation>1 0 0 0 1 0 0 0 1</Rotation>
+<Translation>0 0 0</Translation>
+</Transform>
+</Instance>
+</Instance>
+</InstanceTree>
+<Constraints>
+</Constraints>
+<Joints>
+<Cylindrical name="Cylindrical:1">
+<BaseFrame>
+<InstancePath>
+<Uid>wheel_simplified2:1</Uid>
+</InstancePath>
+<Transform>
+<Rotation>0 -0.64278760968653958 0.7660444431189779 0 -0.7660444431189779 -0.64278760968653958 1 0 0</Rotation>
+<Translation>1.307625341893518 1.558367198968831 0.39000000000000012</Translation>
+</Transform>
+</BaseFrame>
+<FollowerFrame>
+<InstancePath>
+<Uid>Roller:2</Uid>
+</InstancePath>
+<Transform>
+<Rotation>0 0 0 0 0 0 0 0 1</Rotation>
+<Translation>0 0 0</Translation>
+</Transform>
+</FollowerFrame>
+</Cylindrical>
+<Cylindrical name="Cylindrical:2">
+<BaseFrame>
+<InstancePath>
+<Uid>wheel_simplified2:1</Uid>
+</InstancePath>
+<Transform>
+<Rotation>0 -0.86602540378443893 0.49999999999999983 0 -0.49999999999999983 -0.86602540378443893 1 0 0</Rotation>
+<Translation>1.7617588572753298 1.0171519504951192 0.39000000000000012</Translation>
+</Transform>
+</BaseFrame>
+<FollowerFrame>
+<InstancePath>
+<Uid>Roller:3</Uid>
+</InstancePath>
+<Transform>
+<Rotation>0 0 0 0 0 0 0 0 1</Rotation>
+<Translation>0 0 0</Translation>
+</Transform>
+</FollowerFrame>
+</Cylindrical>
+<Cylindrical name="Cylindrical:3">
+<BaseFrame>
+<InstancePath>
+<Uid>wheel_simplified2:1</Uid>
+</InstancePath>
+<Transform>
+<Rotation>0 -0.34202014332566893 0.93969262078590843 0 -0.93969262078590843 -0.34202014332566893 1 0 0</Rotation>
+<Translation>0.69577291178464917 1.9116203641965135 0.39000000000000012</Translation>
+</Transform>
+</BaseFrame>
+<FollowerFrame>
+<InstancePath>
+<Uid>Roller:1</Uid>
+</InstancePath>
+<Transform>
+<Rotation>0 0 0 0 0 0 0 0 1</Rotation>
+<Translation>0 0 0</Translation>
+</Transform>
+</FollowerFrame>
+</Cylindrical>
+<Cylindrical name="Cylindrical:4">
+<BaseFrame>
+<InstancePath>
+<Uid>wheel_simplified2:1</Uid>
+</InstancePath>
+<Transform>
+<Rotation>0 -0.98480775301220813 0.17364817766693033 0 -0.17364817766693033 -0.98480775301220813 1 0 0</Rotation>
+<Translation>2.0033982536781658 0.35325316522768158 0.39000000000000012</Translation>
+</Transform>
+</BaseFrame>
+<FollowerFrame>
+<InstancePath>
+<Uid>Roller:4</Uid>
+</InstancePath>
+<Transform>
+<Rotation>0 0 0 0 0 0 0 0 1</Rotation>
+<Translation>0 0 0</Translation>
+</Transform>
+</FollowerFrame>
+</Cylindrical>
+<Cylindrical name="Cylindrical:5">
+<BaseFrame>
+<InstancePath>
+<Uid>wheel_simplified2:1</Uid>
+</InstancePath>
+<Transform>
+<Rotation>0 -0.98480775301220813 -0.17364817766693047 0 0.17364817766693047 -0.98480775301220813 1 0 0</Rotation>
+<Translation>2.0033982536781658 -0.35325316522768241 0.39000000000000012</Translation>
+</Transform>
+</BaseFrame>
+<FollowerFrame>
+<InstancePath>
+<Uid>Roller:5</Uid>
+</InstancePath>
+<Transform>
+<Rotation>0 0 0 0 0 0 0 0 1</Rotation>
+<Translation>0 0 0</Translation>
+</Transform>
+</FollowerFrame>
+</Cylindrical>
+<Cylindrical name="Cylindrical:6">
+<BaseFrame>
+<InstancePath>
+<Uid>wheel_simplified2:1</Uid>
+</InstancePath>
+<Transform>
+<Rotation>0 -0.8660254037844386 -0.50000000000000022 0 0.50000000000000022 -0.8660254037844386 1 0 0</Rotation>
+<Translation>1.7617588572753293 -1.0171519504951199 0.39000000000000012</Translation>
+</Transform>
+</BaseFrame>
+<FollowerFrame>
+<InstancePath>
+<Uid>Roller:6</Uid>
+</InstancePath>
+<Transform>
+<Rotation>0 0 0 0 0 0 0 0 1</Rotation>
+<Translation>0 0 0</Translation>
+</Transform>
+</FollowerFrame>
+</Cylindrical>
+<Cylindrical name="Cylindrical:7">
+<BaseFrame>
+<InstancePath>
+<Uid>wheel_simplified2:1</Uid>
+</InstancePath>
+<Transform>
+<Rotation>0 -0.64278760968653947 -0.76604444311897812 0 0.76604444311897812 -0.64278760968653947 1 0 0</Rotation>
+<Translation>1.3076253418935175 -1.5583671989688317 0.39000000000000012</Translation>
+</Transform>
+</BaseFrame>
+<FollowerFrame>
+<InstancePath>
+<Uid>Roller:7</Uid>
+</InstancePath>
+<Transform>
+<Rotation>0 -1.6653345369377343e-16 0 1.6653345369377343e-16 0 -1.6653345369377343e-16 0 0 1</Rotation>
+<Translation>0 0 0</Translation>
+</Transform>
+</FollowerFrame>
+</Cylindrical>
+<Cylindrical name="Cylindrical:8">
+<BaseFrame>
+<InstancePath>
+<Uid>wheel_simplified2:1</Uid>
+</InstancePath>
+<Transform>
+<Rotation>0 -0.34202014332566871 -0.93969262078590843 0 0.93969262078590843 -0.34202014332566871 1 0 0</Rotation>
+<Translation>0.69577291178464795 -1.9116203641965139 0.39000000000000012</Translation>
+</Transform>
+</BaseFrame>
+<FollowerFrame>
+<InstancePath>
+<Uid>Roller:8</Uid>
+</InstancePath>
+<Transform>
+<Rotation>0 0 0 0 0 0 0 0 1</Rotation>
+<Translation>0 0 0</Translation>
+</Transform>
+</FollowerFrame>
+</Cylindrical>
+<Cylindrical name="Cylindrical:9">
+<BaseFrame>
+<InstancePath>
+<Uid>wheel_simplified2:1</Uid>
+</InstancePath>
+<Transform>
+<Rotation>0 0 -1 0 1 0 1 0 0</Rotation>
+<Translation>-1.3877787807814457e-16 -2.0343039009902379 0.39000000000000012</Translation>
+</Transform>
+</BaseFrame>
+<FollowerFrame>
+<InstancePath>
+<Uid>Roller:9</Uid>
+</InstancePath>
+<Transform>
+<Rotation>1 0 0 0 1 0 0 0 1</Rotation>
+<Translation>0 0 0</Translation>
+</Transform>
+</FollowerFrame>
+</Cylindrical>
+<Cylindrical name="Cylindrical:10">
+<BaseFrame>
+<InstancePath>
+<Uid>wheel_simplified2:1</Uid>
+</InstancePath>
+<Transform>
+<Rotation>0 0.34202014332566949 -0.93969262078590821 0 0.93969262078590821 0.34202014332566949 1 0 0</Rotation>
+<Translation>-0.69577291178464895 -1.9116203641965139 0.39000000000000012</Translation>
+</Transform>
+</BaseFrame>
+<FollowerFrame>
+<InstancePath>
+<Uid>Roller:10</Uid>
+</InstancePath>
+<Transform>
+<Rotation>0 0 0 0 0 0 0 0 1</Rotation>
+<Translation>0 0 0</Translation>
+</Transform>
+</FollowerFrame>
+</Cylindrical>
+<Cylindrical name="Cylindrical:11">
+<BaseFrame>
+<InstancePath>
+<Uid>wheel_simplified2:1</Uid>
+</InstancePath>
+<Transform>
+<Rotation>0 0.98480775301220813 -0.17364817766693003 0 0.17364817766693003 0.98480775301220813 1 0 0</Rotation>
+<Translation>-2.0033982536781658 -0.3532531652276818 0.39000000000000012</Translation>
+</Transform>
+</BaseFrame>
+<FollowerFrame>
+<InstancePath>
+<Uid>Roller:11</Uid>
+</InstancePath>
+<Transform>
+<Rotation>0 0 0 0 0 0 0 0 1</Rotation>
+<Translation>0 0 0</Translation>
+</Transform>
+</FollowerFrame>
+</Cylindrical>
+<Cylindrical name="Cylindrical:12">
+<BaseFrame>
+<InstancePath>
+<Uid>wheel_simplified2:1</Uid>
+</InstancePath>
+<Transform>
+<Rotation>0 0.86602540378443871 -0.50000000000000011 0 0.50000000000000011 0.86602540378443871 1 0 0</Rotation>
+<Translation>-1.7617588572753298 -1.0171519504951188 0.39000000000000012</Translation>
+</Transform>
+</BaseFrame>
+<FollowerFrame>
+<InstancePath>
+<Uid>Roller:12</Uid>
+</InstancePath>
+<Transform>
+<Rotation>0 0 0 0 0 0 0 0 1</Rotation>
+<Translation>0 0 0</Translation>
+</Transform>
+</FollowerFrame>
+</Cylindrical>
+<Cylindrical name="Cylindrical:13">
+<BaseFrame>
+<InstancePath>
+<Uid>wheel_simplified2:1</Uid>
+</InstancePath>
+<Transform>
+<Rotation>0 0.6427876096865397 -0.7660444431189779 0 0.7660444431189779 0.6427876096865397 1 0 0</Rotation>
+<Translation>-1.3076253418935178 -1.558367198968831 0.39000000000000012</Translation>
+</Transform>
+</BaseFrame>
+<FollowerFrame>
+<InstancePath>
+<Uid>Roller:13</Uid>
+</InstancePath>
+<Transform>
+<Rotation>0 0 0 0 0 0 0 0 1</Rotation>
+<Translation>0 0 0</Translation>
+</Transform>
+</FollowerFrame>
+</Cylindrical>
+<Cylindrical name="Cylindrical:14">
+<BaseFrame>
+<InstancePath>
+<Uid>wheel_simplified2:1</Uid>
+</InstancePath>
+<Transform>
+<Rotation>0 0.86602540378443837 0.50000000000000044 0 -0.50000000000000044 0.86602540378443837 1 0 0</Rotation>
+<Translation>-1.7617588572753295 1.0171519504951196 0.39000000000000012</Translation>
+</Transform>
+</BaseFrame>
+<FollowerFrame>
+<InstancePath>
+<Uid>Roller:14</Uid>
+</InstancePath>
+<Transform>
+<Rotation>0 0 0 0 0 0 0 0 1</Rotation>
+<Translation>0 0 0</Translation>
+</Transform>
+</FollowerFrame>
+</Cylindrical>
+<Cylindrical name="Cylindrical:15">
+<BaseFrame>
+<InstancePath>
+<Uid>wheel_simplified2:1</Uid>
+</InstancePath>
+<Transform>
+<Rotation>0 0.64278760968653947 0.76604444311897812 0 -0.76604444311897812 0.64278760968653947 1 0 0</Rotation>
+<Translation>-1.3076253418935175 1.5583671989688317 0.39000000000000012</Translation>
+</Transform>
+</BaseFrame>
+<FollowerFrame>
+<InstancePath>
+<Uid>Roller:15</Uid>
+</InstancePath>
+<Transform>
+<Rotation>0 0 0 0 0 0 0 0 1</Rotation>
+<Translation>0 0 0</Translation>
+</Transform>
+</FollowerFrame>
+</Cylindrical>
+<Cylindrical name="Cylindrical:16">
+<BaseFrame>
+<InstancePath>
+<Uid>wheel_simplified2:1</Uid>
+</InstancePath>
+<Transform>
+<Rotation>0 0.98480775301220813 0.1736481776669303 0 -0.1736481776669303 0.98480775301220813 1 0 0</Rotation>
+<Translation>-2.0033982536781658 0.35325316522768246 0.39000000000000012</Translation>
+</Transform>
+</BaseFrame>
+<FollowerFrame>
+<InstancePath>
+<Uid>Roller:16</Uid>
+</InstancePath>
+<Transform>
+<Rotation>0 0 0 0 0 0 0 0 1</Rotation>
+<Translation>0 0 0</Translation>
+</Transform>
+</FollowerFrame>
+</Cylindrical>
+<Cylindrical name="Cylindrical:17">
+<BaseFrame>
+<InstancePath>
+<Uid>wheel_simplified2:1</Uid>
+</InstancePath>
+<Transform>
+<Rotation>0 0.34202014332566866 0.93969262078590843 0 -0.93969262078590843 0.34202014332566866 1 0 0</Rotation>
+<Translation>-0.69577291178464806 1.9116203641965139 0.39000000000000012</Translation>
+</Transform>
+</BaseFrame>
+<FollowerFrame>
+<InstancePath>
+<Uid>Roller:17</Uid>
+</InstancePath>
+<Transform>
+<Rotation>0 -1.1102230246251568e-16 0 1.1102230246251568e-16 0 -1.1102230246251568e-16 0 0 1</Rotation>
+<Translation>0 0 0</Translation>
+</Transform>
+</FollowerFrame>
+</Cylindrical>
+<Cylindrical name="Cylindrical:18">
+<BaseFrame>
+<InstancePath>
+<Uid>wheel_simplified2:1</Uid>
+</InstancePath>
+<Transform>
+<Rotation>0 0 1 0 -1 0 1 0 0</Rotation>
+<Translation>1.9428902930940239e-16 2.0343039009902379 0.39000000000000012</Translation>
+</Transform>
+</BaseFrame>
+<FollowerFrame>
+<InstancePath>
+<Uid>Roller:18</Uid>
+</InstancePath>
+<Transform>
+<Rotation>0 0 0 0 0 0 0 0 1</Rotation>
+<Translation>0 0 0</Translation>
+</Transform>
+</FollowerFrame>
+</Cylindrical>
+<Weld name="Rigid:1">
+<BaseFrame>
+<InstancePath>
+<Uid>wheel_simplified2:1</Uid>
+</InstancePath>
+<Transform>
+<Rotation>-0.64278760968653936 0.76604444311897801 0 0.76604444311897801 0.64278760968653936 0 0 0 -1</Rotation>
+<Translation>0 0 -0.20000000000000001</Translation>
+</Transform>
+</BaseFrame>
+<FollowerFrame>
+<InstancePath>
+<Uid>gear_z60_26106000_simplified:1</Uid>
+</InstancePath>
+<Transform>
+<Rotation>0 0 1 -0.98480775301220391 0.17364817766695415 0 -0.17364817766695415 -0.98480775301220391 0</Rotation>
+<Translation>0 0 0</Translation>
+</Transform>
+</FollowerFrame>
+</Weld>
+</Joints>
+</RootAssembly>
+<Assemblies>
+<Assembly name="Roller.iam" uid="Roller.iam_{E4DDFF8D-4A29-BA0F-C525-0EA63CB26BEE}" version="{309A8621-D83B-1958-F7B4-7C30D12E258B}">
+<AssemblyFile name="Roller.iam" type="Inventor Assembly"/>
+</Assembly>
+</Assemblies>
+<Parts>
+<Part name="gear_z60_26106000_simplified.ipt" uid="gear_z60_26106000_simplified.ipt_{A3997E71-4B0D-06D3-12BD-059450D7D968}" version="{1302D9F4-2580-0581-EB13-722C426D1A85}">
+<PartFile name="gear_z60_26106000_simplified.ipt" type="Inventor Part"/>
+<MassProperties>
+<Mass>0.011464955238423951</Mass>
+<CenterOfMass>0.099999999999999853 1.587912727207819e-13 2.0157305363563722e-12</CenterOfMass>
+<Inertia>0.013254747320584865 0.0066654722685467235 0.0066654722666205724 -1.5310547496482829e-13 0 0</Inertia>
+</MassProperties>
+<GeometryFile name="gear_z60_26106000_simplified_ipt_39a2c153.STEP" type="STEP"/>
+<VisualProperties>
+<Ambient r="0.7803921568627451" g="0.5607843137254902" b="0.10980392156862745" a="1"/>
+<Diffuse r="0.7803921568627451" g="0.5607843137254902" b="0.10980392156862745" a="1"/>
+<Specular r="0.7803921568627451" g="0.5607843137254902" b="0.10980392156862745" a="1"/>
+<Emissive r="0" g="0" b="0" a="1"/>
+<Shininess>0.51325000762939454</Shininess>
+</VisualProperties>
+</Part>
+<Part name="Roller.ipt" uid="Roller.ipt_{2C102C11-4343-AF32-459C-5F97DD88C180}" version="{B269C61E-3D3A-2D57-7C79-ECC4EB06A1B7}">
+<PartFile name="Roller.ipt" type="Inventor Part"/>
+<MassProperties>
+<Mass>0.00042123328419836457</Mass>
+<CenterOfMass>-3.0759129973900856e-11 0 0</CenterOfMass>
+<Inertia>1.271618213576367e-05 1.2716184409476525e-05 1.7605558825417186e-05 0 0 0</Inertia>
+</MassProperties>
+<GeometryFile name="Roller_ipt_c77ee251.STEP" type="STEP"/>
+<VisualProperties>
+<Ambient r="0.7803921568627451" g="0.5607843137254902" b="0.10980392156862745" a="1"/>
+<Diffuse r="0.7803921568627451" g="0.5607843137254902" b="0.10980392156862745" a="1"/>
+<Specular r="0.7803921568627451" g="0.5607843137254902" b="0.10980392156862745" a="1"/>
+<Emissive r="0" g="0" b="0" a="1"/>
+<Shininess>0.51325000762939454</Shininess>
+</VisualProperties>
+</Part>
+<Part name="RollerTire.ipt" uid="RollerTire.ipt_{E1A9B439-4457-1BB5-0D31-0D917DF380D3}" version="{AEA6D4AD-0F2D-0EEC-EE12-86452258C85A}">
+<PartFile name="RollerTire.ipt" type="Inventor Part"/>
+<MassProperties>
+<Mass>7.2860775354338029e-05</Mass>
+<CenterOfMass>0 0 0</CenterOfMass>
+<Inertia>5.2234345231370895e-06 5.2234345231370895e-06 1.004522402213339e-05 0 0 0</Inertia>
+</MassProperties>
+<GeometryFile name="RollerTire_ipt_a7c43f89.STEP" type="STEP"/>
+<VisualProperties>
+<Ambient r="0.25098039215686274" g="0.25098039215686274" b="0.25098039215686274" a="1"/>
+<Diffuse r="0.25098039215686274" g="0.25098039215686274" b="0.25098039215686274" a="1"/>
+<Specular r="1" g="1" b="1" a="1"/>
+<Emissive r="0" g="0" b="0" a="1"/>
+<Shininess>0.50012500762939449</Shininess>
+</VisualProperties>
+</Part>
+<Part name="wheel_simplified2.ipt" uid="wheel_simplified2.ipt_{FC343ECF-4ED8-3639-0595-D7B9B3DF5A9A}" version="{3064F82B-C5FD-691A-BA07-4F0E01798D83}">
+<PartFile name="wheel_simplified2.ipt" type="Inventor Part"/>
+<MassProperties>
+<Mass>0.011271823488383828</Mass>
+<CenterOfMass>1.1118860815129144e-06 -7.9229905546869992e-06 0.34595576488320934</CenterOfMass>
+<Inertia>0.012329730447557457 0.012329548127199599 0.022207518871153058 7.0591681981207834e-09 -9.904172484342769e-10 2.6377127006674109e-08</Inertia>
+</MassProperties>
+<GeometryFile name="wheel_simplified2_ipt_f22f5bfb.STEP" type="STEP"/>
+<VisualProperties>
+<Ambient r="0.74901960784313726" g="0.74901960784313726" b="0.74901960784313726" a="1"/>
+<Diffuse r="0.74901960784313726" g="0.74901960784313726" b="0.74901960784313726" a="1"/>
+<Specular r="0" g="0" b="0" a="1"/>
+<Emissive r="0" g="0" b="0" a="1"/>
+<Shininess>0.14999999999999999</Shininess>
+</VisualProperties>
+</Part>
+</Parts>
+</SimscapeMultibodyImportXML>
