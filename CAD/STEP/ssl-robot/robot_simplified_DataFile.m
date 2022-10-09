@@ -46,7 +46,7 @@ smiData.RigidTransform(247).ID = '';
 
 %Translation Method - Cartesian
 %Rotation Method - Arbitrary Axis
-smiData.RigidTransform(1).translation = [9.4368957093138306e-15 -6.6613381477509392e-15 -14.199999999999999];  % mm
+smiData.RigidTransform(1).translation = [0.0 0.0 -4.2];  % mm
 smiData.RigidTransform(1).angle = 5.4407543682016804e-16;  % rad
 smiData.RigidTransform(1).axis = [-0.84648481565632472 -0.53241286316474146 1.2260179688809382e-16];
 smiData.RigidTransform(1).ID = 'B[RoboCinWheel_simplified:1:-:Base_RoboCIn:1]';
@@ -60,7 +60,7 @@ smiData.RigidTransform(2).ID = 'F[RoboCinWheel_simplified:1:-:Base_RoboCIn:1]';
 
 %Translation Method - Cartesian
 %Rotation Method - Arbitrary Axis
-smiData.RigidTransform(3).translation = [4.4408920985006262e-15 -4.4408920985006262e-15 -14.19999999999999];  % mm
+smiData.RigidTransform(3).translation = [0.0 0.0 -4.2];  % mm
 smiData.RigidTransform(3).angle = 1.5702638703594051e-16;  % rad
 smiData.RigidTransform(3).axis = [-1 0 -0];
 smiData.RigidTransform(3).ID = 'B[RoboCinWheel_simplified:2:-:Base_RoboCIn:1]';
@@ -74,7 +74,7 @@ smiData.RigidTransform(4).ID = 'F[RoboCinWheel_simplified:2:-:Base_RoboCIn:1]';
 
 %Translation Method - Cartesian
 %Rotation Method - Arbitrary Axis
-smiData.RigidTransform(5).translation = [0 4.4408920985006262e-15 -14.199999999999999];  % mm
+smiData.RigidTransform(5).translation = [0.0 0.0 -4.2];  % mm
 smiData.RigidTransform(5).angle = 1.1102230246251563e-16;  % rad
 smiData.RigidTransform(5).axis = [-0 -1 0];
 smiData.RigidTransform(5).ID = 'B[RoboCinWheel_simplified:3:-:Base_RoboCIn:1]';
@@ -88,7 +88,7 @@ smiData.RigidTransform(6).ID = 'F[RoboCinWheel_simplified:3:-:Base_RoboCIn:1]';
 
 %Translation Method - Cartesian
 %Rotation Method - Arbitrary Axis
-smiData.RigidTransform(7).translation = [-5.5511151231257827e-15 -2.2204460492503131e-15 -14.199999999999973];  % mm
+smiData.RigidTransform(7).translation = [0.0 0.0 -4.2];  % mm z -14.199999999999973
 smiData.RigidTransform(7).angle = 4.9653727879937527e-16;  % rad
 smiData.RigidTransform(7).axis = [-0.88478379339620006 0.46600175851967618 -1.0236384222759262e-16];
 smiData.RigidTransform(7).ID = 'B[RoboCinWheel_simplified:4:-:Base_RoboCIn:1]';
@@ -1278,7 +1278,7 @@ smiData.RigidTransform(176).ID = 'AssemblyGround[RoboCinWheel_simplified:3:Rolle
 
 %Translation Method - Cartesian
 %Rotation Method - Arbitrary Axis
-smiData.RigidTransform(177).translation = [0 2.2204460492503131e-15 0];  % mm
+smiData.RigidTransform(177).translation = [0 0 0];  % mm
 smiData.RigidTransform(177).angle = 0;  % rad
 smiData.RigidTransform(177).axis = [0 0 0];
 smiData.RigidTransform(177).ID = 'AssemblyGround[RoboCinWheel_simplified:4:wheel_simplified2:1]';
@@ -1670,7 +1670,7 @@ smiData.RigidTransform(232).ID = 'AssemblyGround[RoboCinWheel_simplified:4:Rolle
 
 %Translation Method - Cartesian
 %Rotation Method - Arbitrary Axis
-smiData.RigidTransform(233).translation = [0 0 0];  % mm
+smiData.RigidTransform(233).translation = [0.0 0.0 0.0];  % mm
 smiData.RigidTransform(233).angle = 0;  % rad
 smiData.RigidTransform(233).axis = [0 0 0];
 smiData.RigidTransform(233).ID = 'RootGround[Base_RoboCIn:1]';
@@ -1679,7 +1679,7 @@ smiData.RigidTransform(233).ID = 'RootGround[Base_RoboCIn:1]';
 %Rotation Method - Arbitrary Axis
 smiData.RigidTransform(234).translation = [-32.000000000000036 72.000000000000014 101.80000000000001];  % mm
 smiData.RigidTransform(234).angle = 0.41822432957922939;  % rad
-smiData.RigidTransform(234).axis = [-1.4480812053227719e-16 3.2975447491439919e-16 1];
+smiData.RigidTransform(234).axis = [0.0 0.0 1];
 smiData.RigidTransform(234).ID = 'RootGround[SupportFirstToSecond:1]';
 
 %Translation Method - Cartesian
@@ -1693,7 +1693,7 @@ smiData.RigidTransform(235).ID = 'RootGround[SupportFirstToSecond:2]';
 %Rotation Method - Arbitrary Axis
 smiData.RigidTransform(236).translation = [76.000000000000071 -22.000000000000057 101.8];  % mm
 smiData.RigidTransform(236).angle = 1.2890244595215423;  % rad
-smiData.RigidTransform(236).axis = [0 2.6005566706451153e-16 1];
+smiData.RigidTransform(236).axis = [0 0.0 1];
 smiData.RigidTransform(236).ID = 'RootGround[SupportFirstToSecond:3]';
 
 %Translation Method - Cartesian
