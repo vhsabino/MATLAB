@@ -18,42 +18,40 @@ field.walls.Width1 = 9600; %millimeter
 field.walls.Length1 = 20; %millimeter
 field.walls.Height1 = 100; %millimeter
 field.walls.axis1 = [0 0 0]; %degree
-field.walls.transform1 = [0 -3300 5]; %millimeter
+field.walls.transform1 = [0 -3300 0]; %millimeter
 field.walls.axis2 = [0 0 0]; %degree
-field.walls.transform2 = [0 3300 5]; %millimeter
+field.walls.transform2 = [0 3300 0]; %millimeter
 
 field.walls.Width2 = 6600; %millimeter
 field.walls.Length2 = 20; %millimeter
 field.walls.Height2 = 100; %millimeter
 field.walls.axis3 = [0 1 0]; %degree
-field.walls.transform3 = [4800 0 5]; %millimeter
+field.walls.transform3 = [4800 0 0]; %millimeter
 field.walls.axis4 = [0 1 0]; %degree
-field.walls.transform4 = [-4800 0 5]; %millimeter
+field.walls.transform4 = [-4800 0 0]; %millimeter
 
 field.goals.Width1 = 150; %millimeter
 field.goals.Length1 = 10; %millimeter
 field.goals.Height1 = 150; %millimeter
 field.goals.axis1 = [0 0 0]; %degree
-field.goals.transform1 = [-4575 505 75]; %millimeter
+field.goals.transform1 = [-4500 500 0]; %millimeter
 field.goals.axis2 = [0 0 0]; %degree
-field.goals.transform2 = [-4575 -505 75]; %millimeter
-field.goals.transform3 = [4575 505 75]; %millimeter
-field.goals.transform4 = [4575 -505 75]; %millimeter
+field.goals.transform2 = [-4500 -500 0]; %millimeter
+field.goals.transform3 = [4500 500 0]; %millimeter
+field.goals.transform4 = [4500 -500 0]; %millimeter
 
 field.goals.Width2 = 1000; %millimeter
 field.goals.Length2 = 10; %millimeter
 field.goals.Height2 = 150; %millimeter
-field.goals.transform5 = [4645 0 75]; %millimeter
-field.goals.transform6 = [-4645 0 75]; %millimeter
+field.goals.transform3 = [4500 500 0]; %millimeter
+field.goals.transform4 = [4500 -500 0]; %millimeter
 
 field.lines.Width1 = 6020; %millimeter
 field.lines.Length1 = 10; %millimeter
 field.lines.Height1 = 2; %millimeter
 field.lines.Width2 = 9020; %millimeter
 field.lines.Length2 = 10; %millimeter
-field.lines.Height2 = 1; %millimeter
-field.lines.transform1 = [0 -3000 0]; %millimeter
-field.lines.transform2 = [0 3000 0]; %millimeter
+field.lines.Height2 = 2; %millimeter
 
 field.lines.Width3 = 1010; %millimeter
 field.lines.Length3 = 10; %millimeter
