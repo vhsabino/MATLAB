@@ -8,6 +8,7 @@
 
 %%%VariableName:g
 g = 9.80665;
+SamplingTime = 0.01;
 
 %%%VariableName:field
 field.Width = 10400; %millimeter
@@ -52,23 +53,25 @@ field.lines.Height1 = 2; %millimeter
 field.lines.Width2 = 9020; %millimeter
 field.lines.Length2 = 10; %millimeter
 field.lines.Height2 = 1; %millimeter
-field.lines.transform1 = [0 -3000 0]; %millimeter
-field.lines.transform2 = [0 3000 0]; %millimeter
+field.lines.transform1 = [0 -3005 -10]; %millimeter
+field.lines.transform2 = [0 3005 -10]; %millimeter
+field.lines.transform3 = [4510 0 -10]; %millimeter
+field.lines.transform4 = [-4510 0 -10]; %millimeter
 
 field.lines.Width3 = 1010; %millimeter
 field.lines.Length3 = 10; %millimeter
-field.lines.Height3 = 2; %millimeter
+field.lines.Height3 = 1; %millimeter
 field.lines.Width4 = 2000; %millimeter
 field.lines.Length4 = 10; %millimeter
-field.lines.Height4 = 2; %millimeter
+field.lines.Height4 = 1; %millimeter
 
 field.lines.Radius1 = 1000; %millimeter
 field.lines.Radius2 = 1020; %millimeter
-field.lines.Height = 2;
+field.lines.Height = 1;
 
 %%%VariableName:wheel
 wheel.contact.stiffness = 1e7;  % N/m
-wheel.contact.damping = 1e6;    % N/(m/s)
+wheel.contact.damping = 1e3;    % N/(m/s)
 wheel.contact.transitionRegion = 0.1; % mm
 wheel.contact.staticFriction = 0.5;
 wheel.contact.dynamicFriction = 0.3;
@@ -84,6 +87,16 @@ wheel.density      = 7780;% kg/m^3
 tire.radius        = 0.4; % m
 tire.color         = [0.1 0.1 0.1];
 tire.density       = 1500;% kg/m^3
+
+%%%VariableName:control
+control.Kp = 0.08;
+control.Ki = 0.3;
+control.tf.Numerator = [0.0015 0.0029 0.0015];
+control.tf.Denominator = [1 -1.8890 0.8949];
+control.tf.Ts = 0.01;
+control.tf.df = 0.3;
+control.tf.dm = 1000;
+control.ff = tf(control.tf.Numerator,control.tf.Denominator,control.tf.Ts);
 
 %%%VariableName:smiData
 

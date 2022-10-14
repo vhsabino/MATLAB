@@ -8,6 +8,7 @@
 
 %%%VariableName:g
 g = 9.80665;
+SamplingTime = 0.01;
 
 %%%VariableName:field
 field.Width = 10400; %millimeter
@@ -18,51 +19,55 @@ field.walls.Width1 = 9600; %millimeter
 field.walls.Length1 = 20; %millimeter
 field.walls.Height1 = 100; %millimeter
 field.walls.axis1 = [0 0 0]; %degree
-field.walls.transform1 = [0 -3300 0]; %millimeter
+field.walls.transform1 = [0 -3300 5]; %millimeter
 field.walls.axis2 = [0 0 0]; %degree
-field.walls.transform2 = [0 3300 0]; %millimeter
+field.walls.transform2 = [0 3300 5]; %millimeter
 
 field.walls.Width2 = 6600; %millimeter
 field.walls.Length2 = 20; %millimeter
 field.walls.Height2 = 100; %millimeter
 field.walls.axis3 = [0 1 0]; %degree
-field.walls.transform3 = [4800 0 0]; %millimeter
+field.walls.transform3 = [4800 0 5]; %millimeter
 field.walls.axis4 = [0 1 0]; %degree
-field.walls.transform4 = [-4800 0 0]; %millimeter
+field.walls.transform4 = [-4800 0 5]; %millimeter
 
 field.goals.Width1 = 150; %millimeter
 field.goals.Length1 = 10; %millimeter
 field.goals.Height1 = 150; %millimeter
 field.goals.axis1 = [0 0 0]; %degree
-field.goals.transform1 = [-4500 500 0]; %millimeter
+field.goals.transform1 = [-4575 505 75]; %millimeter
 field.goals.axis2 = [0 0 0]; %degree
-field.goals.transform2 = [-4500 -500 0]; %millimeter
-field.goals.transform3 = [4500 500 0]; %millimeter
-field.goals.transform4 = [4500 -500 0]; %millimeter
+field.goals.transform2 = [-4575 -505 75]; %millimeter
+field.goals.transform3 = [4575 505 75]; %millimeter
+field.goals.transform4 = [4575 -505 75]; %millimeter
 
 field.goals.Width2 = 1000; %millimeter
 field.goals.Length2 = 10; %millimeter
 field.goals.Height2 = 150; %millimeter
-field.goals.transform3 = [4500 500 0]; %millimeter
-field.goals.transform4 = [4500 -500 0]; %millimeter
+field.goals.transform5 = [4645 0 75]; %millimeter
+field.goals.transform6 = [-4645 0 75]; %millimeter
 
 field.lines.Width1 = 6020; %millimeter
 field.lines.Length1 = 10; %millimeter
 field.lines.Height1 = 2; %millimeter
 field.lines.Width2 = 9020; %millimeter
 field.lines.Length2 = 10; %millimeter
-field.lines.Height2 = 2; %millimeter
+field.lines.Height2 = 1; %millimeter
+field.lines.transform1 = [0 -3005 -10]; %millimeter
+field.lines.transform2 = [0 3005 -10]; %millimeter
+field.lines.transform3 = [4510 0 -10]; %millimeter
+field.lines.transform4 = [-4510 0 -10]; %millimeter
 
 field.lines.Width3 = 1010; %millimeter
 field.lines.Length3 = 10; %millimeter
-field.lines.Height3 = 2; %millimeter
+field.lines.Height3 = 1; %millimeter
 field.lines.Width4 = 2000; %millimeter
 field.lines.Length4 = 10; %millimeter
-field.lines.Height4 = 2; %millimeter
+field.lines.Height4 = 1; %millimeter
 
 field.lines.Radius1 = 1000; %millimeter
 field.lines.Radius2 = 1020; %millimeter
-field.lines.Height = 2;
+field.lines.Height = 1;
 
 %%%VariableName:wheel
 wheel.contact.stiffness = 1e7;  % N/m
@@ -82,6 +87,14 @@ wheel.density      = 7780;% kg/m^3
 tire.radius        = 0.4; % m
 tire.color         = [0.1 0.1 0.1];
 tire.density       = 1500;% kg/m^3
+
+%%%VariableName:control
+control.Kp = 
+control.Ki =
+control.tf.Numerator = [0.0015 0.0029 0.0015]
+control.tf.Denominator = 
+control.tf.Ts = 0.01
+
 
 %%%VariableName:smiData
 
