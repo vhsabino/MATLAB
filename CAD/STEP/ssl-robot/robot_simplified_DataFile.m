@@ -98,6 +98,29 @@ control.tf.df = 0.3;
 control.tf.dm = 1000;
 control.ff = tf(control.tf.Numerator,control.tf.Denominator,control.tf.Ts);
 
+%%%VariableName:kinematics
+kinematics.l = 0.081; %Distance from robot center to wheel in m
+kinematics.r = 0.02475; %Wheel radius in m
+kinematics.theta1 = 60; %Angle from wheel 1 to X axis in degrees
+kinematics.theta2 = 45;
+kinematics.theta3 = 45;
+kinematics.theta4 = 60;
+
+kinematics.theta = 0; %Angle from main axis
+kinematics.Rtheta = [cosd(kinematics.theta) sind(kinematics.theta) 0;...
+    -sind(kinematics.theta) cosd(kinematics.theta) 0; 0 0 1]; %Rotation matrix
+
+kinematics.J1f = [-sind(kinematics.theta1) cosd(kinematics.theta1)...
+    kinematics.l; -sind(kinematics.theta2) -cosd(kinematics.theta2)...
+    kinematics.l; sind(kinematics.theta3) -cosd(kinematics.theta3)...
+    kinematics.l; sind(kinematics.theta4) cosd(kinematics.theta4)...
+    kinematics.l];
+kinematics.J2f_inv = [1/kinematics.r 0 0 0; 0 1/kinematics.r 0 0; ...
+    0 0 1/kinematics.r 0; 0 0 0 1/kinematics.r];
+
+kinematics.prod1 = kinematics.J2f_inv*kinematics.J1f;
+kinematics.prod2 = kinematics.prod1*kinematics.Rtheta;
+
 %%%VariableName:smiData
 
 
