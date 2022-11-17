@@ -1844,11 +1844,11 @@ tire.density = 1500;
 
 wheel = struct;
 wheel.contact = struct;
-wheel.contact.stiffness = 1e3;
-wheel.contact.damping = 1e2;
-wheel.contact.transitionRegion = 0.002;
-wheel.contact.staticFriction = 0.4;
-wheel.contact.dynamicFriction = 0.3;
+wheel.contact.stiffness = 17;
+wheel.contact.damping = 1e6;
+wheel.contact.transitionRegion = 0.1;
+wheel.contact.staticFriction = 0.01;
+wheel.contact.dynamicFriction = 0.0;
 wheel.contact.criticalVelocity = 1e-3;
 wheel.radius = 0.2;
 wheel.width = 0.25;
