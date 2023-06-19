@@ -1,0 +1,10 @@
+a = -2.2;
+b = 2.2;
+r_vx = (b-a).*rand(30,1) + a;
+r_range_vx = [min(r_vx) max(r_vx)]
+r_vy = (b-a).*rand(30,1) + a;
+r_range_vy = [min(r_vy) max(r_vy)]
+a = -5;
+b = 5;
+r_w = (b-a).*rand(30,1) + a;
+r_range_w = [min(r_w) max(r_w)]
