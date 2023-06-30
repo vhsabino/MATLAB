@@ -1,11 +1,11 @@
-results1 = zeros(5000,1, 'double');
-input = zeros(5000, 1, 'double');
+results1 = zeros(15000,1, 'double');
+input = zeros(15000, 1, 'double');
 delete(instrfindall);
 try
     
-    nucleo144 = serial('COM5','BaudRate',230400);
+    nucleo144 = serial('COM9','BaudRate',230400);
     fopen(nucleo144);
-    for i = 1:5000
+    for i = 1:15000
         input(i,1) = fscanf(nucleo144,'%f');
         results1(i,1) = fscanf(nucleo144,'%f');
         disp(input(i,1));
