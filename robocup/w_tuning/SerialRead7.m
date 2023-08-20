@@ -3,7 +3,7 @@ input = zeros(15000, 1, 'double');
 delete(instrfindall);
 try
     
-    nucleo144 = serial('COM9','BaudRate',230400);
+    nucleo144 = serial('COM7','BaudRate',230400);
     fopen(nucleo144);
     for i = 1:15000
         input(i,1) = fscanf(nucleo144,'%f');

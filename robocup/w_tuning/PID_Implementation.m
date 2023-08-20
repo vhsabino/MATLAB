@@ -77,10 +77,10 @@ figure;
 OPT_TIME.Title.String = 'Input-Output Data - W';
 plot(speedW_500ms,OPT_TIME);
 
-%figure;
-%plot(t, VX_500ms);
-%hold on
-%plot(t,IN_X_500ms);
+figure;
+plot(t, VX_500ms);
+hold on
+plot(t,IN_X_500ms);
 figure;
 plot(t,VX2_500ms);
 hold on
@@ -88,10 +88,10 @@ plot(t,IN_X2_500ms);
 plot(t,VX3_500ms);
 plot(t,VX4_500ms);
 
-%figure;
-%plot(t, VY_500ms);
-%hold on
-%plot(t,IN_Y_500ms);
+figure;
+plot(t, VY_500ms);
+hold on
+plot(t,IN_Y_500ms);
 figure;
 plot(t, VY2_500ms);
 hold on
@@ -99,7 +99,7 @@ plot(t,IN_Y2_500ms);
 plot(t,VY3_500ms);
 figure;
 %plot(t, W_500ms);
-%hold on
+hold on
 plot(t,IN_W2_500ms);
 hold on
 plot(t,W2_500ms);
